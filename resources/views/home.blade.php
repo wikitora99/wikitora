@@ -37,7 +37,7 @@
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Wikitora</a>
+      <a class="navbar-brand js-scroll" href="#page-top">WikiDev</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -75,7 +75,7 @@
         <div class="container">
           <p class="display-6 color-d">Hello, world!</p>
           <h1 class="intro-title mb-4"><span style="font-weight: 1;">I am </span>Okitora Winnetou</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Back End Developer,UI/UX Designer,Technical Writer</span><strong class="text-slider"></strong></p>
+          <p class="intro-subtitle"><span class="text-slider-items">Back End Developer,DevOps Engineer,UI/UX Designer,Technical Writer</span><strong class="text-slider"></strong></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Download CV</a></p> -->
         </div>
       </div>
