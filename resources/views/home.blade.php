@@ -22,7 +22,7 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style-sky-blue.css" rel="stylesheet">
+  <link href="css/style-orange.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: DevFolio
