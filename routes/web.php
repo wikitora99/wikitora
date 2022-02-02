@@ -13,16 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
   return view('pages/home', [
-    'name' => 'Okitora Winnetou',
-    'mail' => 'wiki.tora99@gmail.com',
-    'role' => 'Full-Stack Developer'
+    'title' => 'A Living Robot'
   ]);
 });
 
 
 Route::get('/blog', function(){
-  return view('pages/blog');
+  return view('pages/blog', [
+    'title' => 'My Space'
+  ]);
 });
 
