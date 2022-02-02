@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', [
-      "name" => "Okitora Winnetou",
-      "mail" => "wiki.tora99@gmail.com",
-      "role" => "Fullstack Developer"
-    ]);
+  return view('pages/home', [
+    'name' => 'Okitora Winnetou',
+    'mail' => 'wiki.tora99@gmail.com',
+    'role' => 'Full-Stack Developer'
+  ]);
 });
+
+
+Route::get('/blog', function(){
+  return view('pages/blog');
+});
+
