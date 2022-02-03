@@ -88,7 +88,7 @@
 
   <!-- Slider Area-start -->
   <div class="slider_area">
-    <div class="single_slider  d-flex align-items-center slider_bg_1">
+    <div class="single_slider d-flex align-items-center slider_bg_1">
       <div class="container">
         <div class="row align-items-center position-relative">
 
@@ -96,8 +96,8 @@
           <div class="col-lg-9">            
             <div class="slider_text">
               <h4>Hello, World!</h4>
-              <h3>I am Fulan bin Fulan<br>
-                <span>Web Developer</span>
+              <h3>I am Okitora Winnetou<br>
+                <span id="slider-items">Back-End Developer,UI/UX Designer,Technical Writer</span><span id="text-slider"></span>
               </h3>
               <a class="boxed-btn3-line" href="#">View Works</a>
             </div>
@@ -370,36 +370,36 @@
         <div class="row">
           <div class="col-lg-8">
             <div class="lets_talk">
-              <h3>Do you have any Project? <a href="#">Let’s Talk</a></h3>
-              <p>Sed eleifend sed nibh nec fringilla. Donec eu cursus sem, vitae tristique ante. Cras pretium rutrum egestas. Integer ultrices libero sed justo vehicula, eget tincidunt tortor tempus.</p>
+              <h3>Have a great idea? <a href="#">Let’s talk</a></h3>
+              <p>If You have any idea and want to turn it into an amazing project. Just let Me know that and tell Me what You need. Feel free to contact Me and will always be open to Anyone who wants to collaborate.</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-3">
             <div class="single_links d-flex justify-content-between align-items-center">
-              <span>Behance</span>
-              <a href="#"> <i class="fa fa-behance"></i> </a>
+              <span>Facebook</span>
+              <a target="_blank" href="https://facebook.com/wikitora"> <i class="fa fa-facebook"></i></a>
             </div>
           </div>
           <div class="col-md-3">
             <div class="single_links d-flex justify-content-between align-items-center">
-              <span>Dribbble</span>
-              <a href="#"> <i class="fa fa-dribbble"></i> </a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="single_links d-flex justify-content-between align-items-center">
-              <span>Medium</span>
-              <a href="#"> <i class="fa fa-medium"></i> </a>
+              <span>Instagram</span>
+              <a target="_blank" href="https://instagram.com/wiki.tora"> <i class="fa fa-instagram"></i></a>
             </div>
           </div>
           <div class="col-md-3">
             <div class="single_links d-flex justify-content-between align-items-center">
               <span>Linkedin</span>
-              <a href="#"> <i class="fa fa-linkedin"></i> </a>
+              <a target="_blank" href="https://linkedin.com/in/wikitora"> <i class="fa fa-linkedin"></i></a>
             </div>
           </div>
+          <div class="col-md-3">
+            <div class="single_links d-flex justify-content-between align-items-center">
+              <span>Dribbble</span>
+              <a target="_blank" href="https://dribbble.com/wikitora"> <i class="fa fa-dribbble"></i></a>
+            </div>
+          </div>    
         </div>
       </div>
     </div>
@@ -444,6 +444,8 @@
   <!-- <script src="js/gijgo.min.js"></script> -->
   <script src="js/slick.min.js"></script>
 
+  <!-- Typed -->
+  <script src="lib/typed/typed.min.js"></script>
 
   <!-- Contact JS -->
   <script src="js/contact.js"></script>
