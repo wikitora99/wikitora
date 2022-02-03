@@ -15,15 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-  return view('pages/home', [
-    'title' => 'A Living Robot'
-  ]);
+  return view('welcome');
 });
 
 
-Route::get('/blog', function(){
-  return view('pages/blog', [
-    'title' => 'My Space'
-  ]);
-});
 
