@@ -2,27 +2,15 @@
 @extends('layouts.main')
 
 @section('content')
-  <!-- Bradcam Area-start  -->
-  <div class="bradcam_area bradcam_bg_1">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="bradcam_text text-center">
-            <h3>Blog Area</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Bradcam Area-end  -->
-
+  
+  @include('partials.blog-slider')
 
   <!--=============== Blog Area =================-->
   <section class="blog_area section-padding">
     <div class="container">
       <div class="row">
 
-        <!-- Post Area-start -->
+        <!-- Posts Area-start -->
         <div class="col-lg-8 mb-5 mb-lg-0">
           <div class="blog_left_sidebar">
 
@@ -72,9 +60,9 @@
             </nav>            
           </div>
         </div>
-        <!-- Post Area-end -->
+        <!-- Posts Area-end -->
 
-        @include('partials.sidebar')
+        @include('partials.blog-sidebar')
 
       </div>
     </div>
