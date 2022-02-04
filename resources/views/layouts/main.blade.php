@@ -1,158 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>WikiDev - {{ $title }}</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicons -->
-  <link href="img/favicon.ico" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS here -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/gijgo.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slicknav.css">
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style-red.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: DevFolio
-    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
-<body id="page-top">
-
+<body>    
   @include('partials.navbar')
 
-  @yield('content')        
+  @yield('content')
 
-  <!--/ Section Contact-Footer Star /-->
-  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="contact-mf">
-            <div id="contact" class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                      Send Me Message
-                    </h5>
-                  </div>
-                  <div>
-                      <form action="" method="post" role="form" class="contactForm">
-                      <div id="sendmessage">Your message has been sent. Thank you!</div>
-                      <div id="errormessage"></div>
-                      <div class="row">
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                              <div class="validation"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Your Message"></textarea>
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Get in Touch
-                    </h5>
-                  </div>
-                  <div class="more-info">
-                    <p class="lead">
-                      Have a great idea on your mind? Let Me know that and tell Me what You need!<br> Feel free to contact me, I will always be open to anyone who wants to collaborate or asking me about else.
-                    </p>
-                    <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span>Jakarta, Indonesia</li>
-                      <li><span class="ion-ios-telephone"></span>(+62) 882-1001-2082</li>
-                      <li><span class="ion-email"></span>hello@wikitora.dev</li>
-                    </ul>
-                  </div>
-                  <div class="socials">
-                    <ul>
-                      <li><a href="https://facebook.com/wikitora"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href="https://instagram.com/wikitora"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href="https://linkedin.com/wikitora"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                      <li><a href="https://youtube.com/wikitora"><span class="ico-circle"><i class="ion-social-youtube"></i></span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+  <!-- Footer-start -->
+  <footer class="footer">
+    <div class="footer_top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="lets_talk">
+              <h3>Have a great idea? <a href="#">Let’s talk</a></h3>
+              <p>If you have an idea and want to turn it into an amazing project, just let me know and tell what you need. Feel free to contact me, I will always be open to anyone who wants to collaborate or just say hello.</p>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="single_links d-flex justify-content-between align-items-center">
+              <span>Facebook</span>
+              <a target="_blank" href="https://facebook.com/wikitora"> <i class="fa fa-facebook"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="single_links d-flex justify-content-between align-items-center">
+              <span>Instagram</span>
+              <a target="_blank" href="https://instagram.com/wiki.tora"> <i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="single_links d-flex justify-content-between align-items-center">
+              <span>Linkedin</span>
+              <a target="_blank" href="https://linkedin.com/in/wikitora"> <i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="single_links d-flex justify-content-between align-items-center">
+              <span>Dribbble</span>
+              <a target="_blank" href="https://dribbble.com/wikitora"> <i class="fa fa-dribbble"></i></a>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+    <div class="copy-right_text">
+      <div class="container">
+        <div class="footer_border"></div>
+        <div class="row">
+          <div class="col-xl-12">
+            <!-- Copyright to Colorlib -->
+            <p class="copy_right text-center">
+              &copy; {{ date('Y') }} <a href="https://wikitora.dev" target="_blank">WikiDev</a>. All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="copyright-box">
-              <p class="copyright">&copy; {{ date('Y') }} <strong>WikiDev</strong>. All Rights Reserved</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </section>
-  <!--/ Section Contact-footer End /-->
+  </footer>
+  <!--/ Footer-end  -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
+  <!-- Link that opens popup -->
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/counterup/jquery.waypoints.min.js"></script>
-  <script src="lib/counterup/jquery.counterup.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/typed/typed.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <!-- JS here -->
+  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/ajax-form.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/scrollIt.js"></script>
+  <script src="js/jquery.scrollUp.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/nice-select.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <!-- <script src="js/gijgo.min.js"></script> -->
+  <script src="js/slick.min.js"></script>
 
-  <!-- Template Main Javascript File -->
+  <!-- Typed -->
+  <script src="js/typed.min.js"></script>
+
+  <!-- Contact JS -->
+  <script src="js/contact.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/jquery.form.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/mail-script.js"></script>
+
+  <!-- Main JS -->
   <script src="js/main.js"></script>
-
 </body>
 </html>

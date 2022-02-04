@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Article;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +15,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-  return view('pages/home', [
+// Route::get('/', function () {
+//   return view('welcome');
+// });
+
+
+Route::get('/', function (){
+  return view('pages.home', [
     'title' => 'A Living Robot'
   ]);
 });
 
-
-Route::get('/blog', function(){
-  return view('pages/blog', [
-    'title' => 'My Space'
+Route::get('/blog', function (){
+  return view('pages.posts', [
+    'title' => 'Blog Posts',
+    'posts' => Article::getAll()
   ]);
 });
+
+Route::get('/blog/{slug}', function ($slug){
+  $post = Article::getPost($slug);
+
+  return view('pages.post', [
+    'title' => $post['title'],
+    'post' => $post
+  ]);
+});
+
 
