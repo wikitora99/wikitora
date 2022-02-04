@@ -5090,7 +5090,7 @@ h6 {
 /* line 529, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog_details {
   background-color: #F0F2F5;
-  padding: 30px 0 20px 10px;
+  padding: 30px;
   /*box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);*/
 }
 

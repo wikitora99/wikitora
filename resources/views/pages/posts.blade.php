@@ -30,8 +30,14 @@
                 </a>
                 <p>{{ $post['text'] }}</p>
                 <ul class="blog-info-link">
-                  <li><a href="#"><i class="fa fa-user"></i> {{ $post['author'] }}</a></li>
-                  <li><a href="#"><i class="fa fa-comment"></i> {{ $post['category'][0] }}, {{ $post['category'][1] }}</a></li>
+                  <li><i class="fa fa-user"></i>
+                    <a href="#"> {{ $post['author'] }}</a>
+                  </li>
+                  <li><i class="fa fa-comment"></i>
+                    @foreach($post['category'] as $key => $cat)
+                      <a href="#">{{ $cat }}</a>{{ $loop->last ? ' ' : ', '}}
+                    @endforeach()
+                  </li>
                 </ul>
               </div>
             </article>

@@ -27,8 +27,8 @@ Route::get('/', function (){
 });
 
 Route::get('/blog', function (){
-  return view('pages.blog', [
-    'title' => 'Blog',
+  return view('pages.posts', [
+    'title' => 'Blog Posts',
     'posts' => Article::getAll()
   ]);
 });
