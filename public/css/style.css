@@ -291,8 +291,7 @@ h3 {
 
 /* line 210, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/theme-default.scss */
 .section-padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 80px 0;
 }
 
 /* line 214, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/theme-default.scss */
@@ -2814,7 +2813,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
 .bradcam_bg_1 {
-  background-image: url(../img/banner/bradcam.png);
+  background-image: url(../img/banner/blog-bg.png);
 }
 
 /* line 4, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
@@ -2831,7 +2830,7 @@ h3 {
 .bradcam_area {
   background-size: cover;
   background-position: center center;
-  padding: 204px 0 193px 0;
+  padding: 102px 0;
   background-repeat: no-repeat;
   position: relative;
   z-index: 0;
@@ -2840,14 +2839,14 @@ h3 {
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 10, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
   .bradcam_area {
-    padding: 120px 0;
+    padding: 60px 0;
   }
 }
 
 @media (max-width: 767px) {
   /* line 10, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
   .bradcam_area {
-    padding: 150px 0;
+    padding: 75px 0;
   }
 }
 
@@ -2882,8 +2881,10 @@ h3 {
 
 /* line 44, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
 .bradcam_area h3 {
-  font-size: 80px;
+  font-size: 60px;
   color: #fff;
+  letter-spacing: 2px;
+  padding-top: 40px;
   font-weight: 300;
   margin-bottom: 0;
   text-transform: capitalize;
@@ -2892,7 +2893,8 @@ h3 {
 @media (max-width: 767px) {
   /* line 44, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
   .bradcam_area h3 {
-    font-size: 30px;
+    padding-top: 18px;
+    font-size: 22px;
   }
 }
 
@@ -3019,7 +3021,7 @@ h3 {
 
 /* line 11, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_service.scss */
 .service_area .single_service {
-  border: 1px solid #6B4B40;
+  border: 1px solid #40666b;
   padding: 45px 30px;
   margin-bottom: 30px;
 }
@@ -4585,6 +4587,10 @@ h6 {
   margin-bottom: 70px;
 }
 
+.blog_area{
+  background-color: #dfe3e8;
+}
+
 /* line 10, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog_area a {
   color: #666666 !important;
@@ -5083,8 +5089,9 @@ h6 {
 
 /* line 529, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog_details {
+  background-color: #F0F2F5;
   padding: 30px 0 20px 10px;
-  box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);
+  /*box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);*/
 }
 
 @media (min-width: 768px) {
@@ -5174,8 +5181,8 @@ h6 {
   bottom: -10px;
   left: 10px;
   display: block;
-  color: #fff;
-  background-color: #F91842;
+  color: #2CE8B9;
+  background-color: #0A1A2F;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -5193,7 +5200,7 @@ h6 {
 .blog_item_img .blog_item_date h3 {
   font-size: 22px;
   font-weight: 600;
-  color: #fff;
+  color: #2CE8B9;
   margin-bottom: 0;
   line-height: 1.2;
 }
@@ -5208,8 +5215,9 @@ h6 {
 /* line 628, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog_item_img .blog_item_date p {
   font-size: 18px;
+  font-weight: 400;
   margin-bottom: 0;
-  color: #fff;
+  color: #2CE8B9;
 }
 
 @media (min-width: 768px) {
@@ -5235,7 +5243,7 @@ h6 {
 
 /* line 661, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog_right_sidebar .single_sidebar_widget {
-  background: #fbf9ff;
+  background: #f0f2f5;
   padding: 30px;
   margin-bottom: 30px;
 }

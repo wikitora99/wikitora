@@ -19,8 +19,8 @@ if ($('#text-slider').length == 1) {
     strings: typed_strings.split(','),
     typeSpeed: 80,
     loop: true,
-    backDelay: 1100,
-    backSpeed: 30
+    backDelay: 1200,
+    backSpeed: 40
   });
 }
 
