@@ -19,9 +19,11 @@ class CreateArticlesTable extends Migration
       //       ->constrained('users')
       //       ->onUpdate('cascade');
       $table->string('title');
-      // $table->string('categories');
-      // $table->string('tags');
-      $table->string('slug');
+      $table->foreignId('category')
+            ->constrained('categories')
+            ->onUpdate('cascade');
+      $table->string('tags');
+      $table->string('slug')->unique();
       $table->string('cover');
       $table->string('excerpt');
       $table->text('body');

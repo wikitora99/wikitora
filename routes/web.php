@@ -28,11 +28,13 @@ use App\Http\Controllers\ {
 
 Route::controller(Article::class)->group(function (){
   Route::get('/blog', 'index');
-  Route::get('/blog/{slug}', 'single');
+  Route::get('/blog/{post:slug}', 'post');
 });
 
 
-// Static pages
+Route::get('/categories/{slug}', );
+
+
 Route::get('/', function(){
   return view('pages.home', [
     'title' => 'A Living Robot'

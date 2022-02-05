@@ -5,7 +5,7 @@
       <form action="#">
         <div class="form-group">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder='Search here...' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here...'">
+            <input type="text" class="form-control" placeholder='Search anything here...' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here...'">
             <div class="input-group-append">
               <button class="btn" type="button"><i class="ti-search"></i></button>
             </div>
@@ -60,7 +60,7 @@
     <aside class="single_sidebar_widget popular_post_widget">
       <h3 class="widget_title">Popular Post</h3>
       <div class="media post_item">
-        <img src="img/post/post_1.png" alt="post">
+        <img src="/img/post/post_1.png" alt="post">
         <div class="media-body">
           <a href="single-blog.html">
             <h3>From life was you fish...</h3>
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="media post_item">
-        <img src="img/post/post_2.png" alt="post">
+        <img src="/img/post/post_2.png" alt="post">
         <div class="media-body">
           <a href="single-blog.html">
             <h3>The Amazing Hubble</h3>
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="media post_item">
-        <img src="img/post/post_3.png" alt="post">
+        <img src="/img/post/post_3.png" alt="post">
         <div class="media-body">
           <a href="single-blog.html">
             <h3>Astronomy Or Astrology</h3>
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="media post_item">
-        <img src="img/post/post_4.png" alt="post">
+        <img src="/img/post/post_4.png" alt="post">
         <div class="media-body">
           <a href="single-blog.html">
             <h3>Asteroids telescope</h3>

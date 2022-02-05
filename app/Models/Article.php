@@ -9,12 +9,15 @@ class Article extends Model
 {
   use HasFactory;
 
-  protected $fillable = [
-    'title', 
-    'slug', 
-    'cover',
-    'excerp', 
-    'body'
-  ];
+  /*protected $fillable = [
+      'title', 
+      'slug', 
+      'category'
+      'cover',
+      'excerpt', 
+      'body'
+    ];*/
+
+  protected $guarded = 'id';
 
 }
