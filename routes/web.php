@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Article;
+use App\Http\Controllers\ArticleController as Posts;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,20 +26,7 @@ Route::get('/', function (){
   ]);
 });
 
-Route::get('/blog', function (){
-  return view('pages.posts', [
-    'title' => 'Blog Posts',
-    'posts' => Article::getAll()
-  ]);
-});
-
-Route::get('/blog/{slug}', function ($slug){
-  $post = Article::getPost($slug);
-
-  return view('pages.post', [
-    'title' => $post['title'],
-    'post' => $post
-  ]);
-});
+Route::get('/blog', [Posts::class, 'index']);
+Route::get('/blog/{slug}', [Posts::class, 'post']);
 
 

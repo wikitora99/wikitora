@@ -7,7 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-  use HasFactory;  
+  use HasFactory;
+
+  protected $table = 'articles';
+
+  protected $fillable = [
+    // 
+  ];
 
   private static $blog_posts = [
     [
@@ -41,20 +47,13 @@ class Article extends Model
 
   public static function getAll()
   {
-    return self::$blog_posts;
+    return collect(self::$blog_posts);
   }
 
   public static function getPost($slug)
   {
-    $posts = self::$blog_posts;
-    $post = [];
+    $posts = static::getAll();
 
-    foreach ($posts as $p) {
-      if ($p['slug'] === $slug){
-        $post = $p;
-      }
-    }
-
-    return $p;
+    return $posts->firstWhere('slug', $slug);
   }
 }

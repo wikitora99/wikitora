@@ -6,26 +6,39 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateArticlesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('articles', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('articles', function (Blueprint $table) {
+      $table->id();
+      $table->foreign('author')
+            ->references('id')
+            ->on('users')
+            ->onUpdate('cascade');
+      $table->string('title');
+      // $table->string('categories');
+      // $table->string('tags');
+      $table->string('slug');
+      $table->string('cover');
+      $table->string('excerpt');
+      $table->text('body');
+      $table->timestamp('published_at')
+            ->nullable();
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('articles');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('articles');
+  }
 }
