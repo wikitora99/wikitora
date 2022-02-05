@@ -13,6 +13,11 @@ $(window).on('scroll', function () {
 });
 
 
+if ($('#blog-padd').length == 1){
+  $('#sticky-header').addClass('navblog-dark');
+}
+
+
 if ($('#text-slider').length == 1) {
   var typed_strings = $('#slider-items').text();
   var typed = new Typed('#text-slider', {

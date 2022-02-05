@@ -2,11 +2,9 @@
 @extends('layouts.main')
 
 @section('content')
-  
-  @include('partials.blog-slider')
 
   <!--=============== Blog Area =================-->
-  <section class="blog_area section-padding">
+  <section class="blog_area section-padding" id="blog-padd">
     <div class="container">
       <div class="row">
 
@@ -18,26 +16,27 @@
             @foreach($posts as $post)
             <article class="blog_item">
               <div class="blog_item_img">
-                <img class="card-img rounded-0" src="/img/blog/{{ $post['thumb'] }}" alt="Post thumbnail">
+                <img class="card-img rounded-0" src="/img/blog/{{ $post->cover }}" alt="Post thumbnail">
                 <span class="blog_item_date">
-                  <h3>{{ $post['date'][0] }}</h3>
-                  <p>{{ $post['date'][1] }}</p>
+                  <h3>19</h3>
+                  <p>Apr</p>
                 </span>
               </div>
               <div class="blog_details">
-                <a class="d-inline-block" href="/blog/{{ $post['slug'] }}">
-                  <h2>{{ $post['title'] }}</h2>
+                <a class="d-inline-block" href="/blog/{{ $post->slug }}">
+                  <h2>{{ $post->title }}</h2>
                 </a>
-                <p>{{ $post['text'] }}</p>
+                <p>{{ $post->excerpt }}</p>
                 <ul class="blog-info-link">
-                  <li><i class="fa fa-user"></i>
-                    <a href="#"> {{ $post['author'] }}</a>
+                  <li>
+                    <i class="fa fa-user"></i>
+                    <a href="#"> Okitora Winnetou</a>
                   </li>
-                  <li><i class="fa fa-comment"></i>
-                    @foreach($post['category'] as $key => $cat)
-                      <a href="#">{{ $cat }}</a>{{ $loop->last ? ' ' : ', '}}
-                    @endforeach()
-                  </li>
+                  <li>
+                    <i class="fa fa-comment"></i>
+                    <a href="#">Career</a>,
+                    <a href="#">Technology</a>
+                  </li>                  
                 </ul>
               </div>
             </article>

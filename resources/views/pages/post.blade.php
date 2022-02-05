@@ -2,11 +2,9 @@
 @extends('layouts.main')
 
 @section('content')
-  
-  @include('partials.blog-slider')
 
   <!--=============== Blog Area =================-->
-  <section class="blog_area single-post-area section-padding">
+  <section class="blog_area single-post-area section-padding" id="blog-padd">
     <div class="container">
        <div class="row">
 
@@ -14,20 +12,23 @@
         <div class="col-lg-8 posts-list">
           <div class="single-post">
             <div class="feature-img">
-               <img class="img-fluid" src="img/blog/{{ $post['thumb'] }}" alt="">
+               <img class="img-fluid" src="img/blog/{{ $post->cover }}" alt="">
             </div>
             <div class="blog_details">
-              <h2>{{ $post['title'] }}</h2>
+              <h2>{{ $post->title }}</h2>
               <ul class="blog-info-link mt-3 mb-4">
-                <li><a href="#"><i class="fa fa-user"></i>{{ $post['author'] }}</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i>
-                  @foreach($post['category'] as $cat)
-                    {{ $cat[$loop->index] }}
-                  @endforeach()
-                </a></li>
+                <li>
+                  <i class="fa fa-user"></i>
+                  <a href="#">Okitora Winnetou</a>
+                </li>
+                <li>
+                  <i class="fa fa-comments"></i>
+                  <a href="#">Career</a>,
+                  <a href="#">Technology</a>
+                </li>
               </ul>
               <p class="excert">
-                {{ $post['text'] }}
+                {{ $post->body }}
               </p>
             </div>
           </div>

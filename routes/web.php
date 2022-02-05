@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArticleController as Posts;
+use App\Http\Controllers\ {
+  ArticleController as Article,
+  CategoryController as Category,
+  CommentController as Comment,
+  TagController as Tag
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +25,43 @@ use App\Http\Controllers\ArticleController as Posts;
 // });
 
 
-Route::get('/', function (){
+
+Route::controller(Article::class)->group(function (){
+  Route::get('/blog', 'index');
+  Route::get('/blog/{slug}', 'single');
+});
+
+
+// Static pages
+Route::get('/', function(){
   return view('pages.home', [
     'title' => 'A Living Robot'
   ]);
 });
 
-Route::get('/blog', [Posts::class, 'index']);
-Route::get('/blog/{slug}', [Posts::class, 'post']);
+Route::get('/about', function(){ 
+  return view('pages.about', [
+    'title' => 'About Me'
+  ]); 
+});
+
+Route::get('/services', function(){ 
+  return view('pages.services', [
+    'title' => 'My Services'
+  ]); 
+});
+
+Route::get('/works', function(){ 
+  return view('pages.works', [
+    'title' => 'My Works'
+  ]);
+});
+
+Route::get('/contact', function(){ 
+  return view('pages.contact', [
+    'title' => 'Contact Me'
+  ]);
+});
+
 
 

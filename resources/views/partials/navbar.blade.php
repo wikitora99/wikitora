@@ -1,4 +1,4 @@
-<!-- Header-start -->
+Header-start -->
 <header class="header-area">
   <div id="sticky-header" class="main-header-area">
     <div class="container-fluid ">
@@ -23,13 +23,13 @@
                   <li><a href="/work">Works</a></li>
                   <li><a href="/blog">Blog</a></li>
                   <li><a href="/contact">Contact</a></li>
-                  <li><a href="#">Dropdown <i class="ti-angle-down"></i></a>
+                  <!-- <li><a href="#">Dropdown <i class="ti-angle-down"></i></a>
                     <ul class="submenu">
                       <li><a href="works_details.html">Submenu 1</a></li>
                       <li><a href="elements.html">Submenu 2</a></li>
                       <li><a href="elements.html">Submenu 3</a></li>
                     </ul>
-                  </li>
+                  </li> -->
                 </ul>
               </nav>
             </div>
@@ -53,4 +53,4 @@
     </div>
   </div>
 </header>
-<!-- Header-end -->
+<!-- Header-end

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Article as Posts;
+use App\Models\Article;
 
 class ArticleController extends Controller
 {
@@ -12,16 +12,16 @@ class ArticleController extends Controller
   {
     return view('pages.posts', [
       'title' => 'Blog Posts',
-      'posts' => Posts::getAll()
+      'posts' => Article::all()
     ]);
   }
 
-  public function post($slug)
+  public function single($slug)
   {
-    $post = Posts::getPost($slug);
+    $post = Article::firstWhere('slug', $slug);
 
     return view('pages.post', [
-      'title' => $post['title'],
+      'title' => $post->title,
       'post' => $post
     ]);
   }
