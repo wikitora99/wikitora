@@ -14,15 +14,10 @@ class CreateArticlesTable extends Migration
   public function up()
   {
     Schema::create('articles', function (Blueprint $table) {
-      $table->id();
-      // $table->foreignId('author')
-      //       ->constrained('users')
-      //       ->onUpdate('cascade');
+      $table->id();      
       $table->string('title');
-      $table->foreignId('category')
-            ->constrained('categories')
-            ->onUpdate('cascade');
-      $table->string('tags');
+      $table->foreignId('user_id');
+      $table->foreignId('category_id');
       $table->string('slug')->unique();
       $table->string('cover');
       $table->string('excerpt');

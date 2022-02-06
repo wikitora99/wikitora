@@ -8,10 +8,11 @@ use App\Models\Category;
 class CategoryController extends Controller
 {
 
-  public function index()
+  public function index(Category $category)
   {
-    return view('pages.categories', [
-      'title' => 'Post Category List'
+    return view('pages.category', [
+      'title' => 'Blog Category: '.$category->name,
+      'posts' => $category->posts
     ]);
   }
 

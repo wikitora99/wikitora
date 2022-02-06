@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  protected $guarded = 'id';
+
+  public function posts()
+  {
+    return $this->hasMany(Article::class);
+  }
+
 }

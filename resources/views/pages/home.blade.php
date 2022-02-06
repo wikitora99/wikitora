@@ -31,7 +31,7 @@
 
 
   <!-- About Area-start -->
-  <div class="download_area">
+  <div id="about" class="download_area">
     <div class="container">
       <div class="row">
         <div class="col-xl-10">
@@ -86,7 +86,7 @@
 
 
   <!-- Service Area-start  -->
-  <div class="service_area">
+  <div id="services" class="service_area">
     <div class="container">
       <div class="row">
         <div class="col-xl-12">
@@ -130,7 +130,7 @@
 
 
   <!-- Gallery Area-start  -->
-  <div class="gallery_area">
+  <div id="works" class="gallery_area">
     <div class="container">
       <div class="row">
         <div class="col-xl-12">

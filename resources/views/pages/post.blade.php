@@ -21,16 +21,15 @@
               <ul class="blog-info-link mt-3 mb-4">
                 <li>
                   <i class="fa fa-user"></i>
-                  <a href="#">Okitora Winnetou</a>
+                  <a href="#"> {{ $post->user->name }}</a>
                 </li>
                 <li>
                   <i class="fa fa-tag"></i>
-                  <a href="#">Career</a>,
-                  <a href="#">Technology</a>
+                  <a href="/category/{{ $post->category->slug }}"> {{ $post->category->name }}</a>
                 </li>
               </ul>
               <p class="excert">
-                {!! $post->body !!}
+                {{ $post->body }}
               </p>
             </div>
           </div>

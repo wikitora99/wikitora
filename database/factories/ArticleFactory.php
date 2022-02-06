@@ -14,11 +14,14 @@ class ArticleFactory extends Factory
    */
   public function definition()
   {
+
     return [
       'title' => $this->faker->sentence(mt_rand(6,8)),
       'slug' => $this->faker->slug(4),
+      'category' => mt_rand(1,5),
       'cover' => 'cover ('.strval(mt_rand(1,5)).').png',
-      ''
+      'excerpt' => $this->faker->sentence(25),
+      'body' => $this->faker->paragraph(mt_rand(5,8))
     ];
   }
 }

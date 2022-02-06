@@ -32,7 +32,7 @@ Route::controller(Article::class)->group(function (){
 });
 
 
-Route::get('/categories/{slug}', );
+Route::get('/category/{category:slug}', [Category::class, 'index']);
 
 
 Route::get('/', function(){
