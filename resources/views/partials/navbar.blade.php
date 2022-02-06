@@ -7,7 +7,7 @@
           <div class="col-xl-3 col-lg-2">
             <div class="logo">
               <a href="/">
-                <img src="img/logo.png" alt="">
+                <img src="/img/logo.png" alt="">
               </a>
             </div>
           </div>
@@ -18,18 +18,11 @@
               <nav>
                 <ul id="navigation">
                   <li><a href="/">Home</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/service">Services</a></li>
-                  <li><a href="/work">Works</a></li>
+                  <li><a href="/#about">About</a></li>
+                  <li><a href="/#services">Services</a></li>
+                  <li><a href="/#works">Works</a></li>
                   <li><a href="/blog">Blog</a></li>
-                  <li><a href="/contact">Contact</a></li>
-                  <li><a href="#">Dropdown <i class="ti-angle-down"></i></a>
-                    <ul class="submenu">
-                      <li><a href="works_details.html">Submenu 1</a></li>
-                      <li><a href="elements.html">Submenu 2</a></li>
-                      <li><a href="elements.html">Submenu 3</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="/#contact">Contact</a></li>
                 </ul>
               </nav>
             </div>
@@ -53,4 +46,4 @@
     </div>
   </div>
 </header>
-<!-- Header-end -->
+<!-- Header-end

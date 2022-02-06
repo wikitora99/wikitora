@@ -2,11 +2,9 @@
 @extends('layouts.main')
 
 @section('content')
-  
-  @include('partials.blog-slider')
 
   <!--=============== Blog Area =================-->
-  <section class="blog_area single-post-area section-padding">
+  <section class="blog_area single-post-area section-padding" id="blog-padd">
     <div class="container">
        <div class="row">
 
@@ -14,23 +12,28 @@
         <div class="col-lg-8 posts-list">
           <div class="single-post">
             <div class="feature-img">
-               <img class="img-fluid" src="img/blog/{{ $post['thumb'] }}" alt="">
+               <img class="img-fluid" src="/img/blog/cover/{{ $post->cover }}" alt="">
             </div>
+
+            <!-- Article Detail-start -->
             <div class="blog_details">
-              <h2>{{ $post['title'] }}</h2>
+              <h2>{{ $post->title }}</h2>
               <ul class="blog-info-link mt-3 mb-4">
-                <li><a href="#"><i class="fa fa-user"></i>{{ $post['author'] }}</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i>
-                  @foreach($post['category'] as $cat)
-                    {{ $cat[$loop->index] }}
-                  @endforeach()
-                </a></li>
+                <li>
+                  <i class="fa fa-user"></i>
+                  <a href="#"> {{ $post->user->name }}</a>
+                </li>
+                <li>
+                  <i class="fa fa-tag"></i>
+                  <a href="/category/{{ $post->category->slug }}"> {{ $post->category->name }}</a>
+                </li>
               </ul>
               <p class="excert">
-                {{ $post['text'] }}
+                {{ $post->body }}
               </p>
             </div>
           </div>
+          <!-- Article Detail-end -->
          
           <!-- Comment Section-start -->
           <div class="comments-area">
@@ -39,7 +42,7 @@
               <div class="single-comment justify-content-between d-flex">
                 <div class="user justify-content-between d-flex">
                   <div class="thumb">
-                    <img src="img/comment/comment_1.png" alt="">
+                    <img src="/img/comment/comment_1.png" alt="">
                   </div>
                   <div class="desc">
                     <p class="comment">
@@ -65,7 +68,7 @@
                <div class="single-comment justify-content-between d-flex">
                   <div class="user justify-content-between d-flex">
                      <div class="thumb">
-                        <img src="img/comment/comment_2.png" alt="">
+                        <img src="/img/comment/comment_2.png" alt="">
                      </div>
                      <div class="desc">
                         <p class="comment">
@@ -91,7 +94,7 @@
               <div class="single-comment justify-content-between d-flex">
                 <div class="user justify-content-between d-flex">
                   <div class="thumb">
-                    <img src="img/comment/comment_3.png" alt="">
+                    <img src="/img/comment/comment_3.png" alt="">
                   </div>
                   <div class="desc">
                     <p class="comment">
@@ -101,7 +104,7 @@
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <h5>
-                          </a>
+                          <a href="#">Emilly Blunt</a>
                         </h5>
                         <p class="date">December 4, 2017 at 3:12 pm </p>
                       </div>
@@ -142,7 +145,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group btn-send">
                 <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
               </div>
             </form>

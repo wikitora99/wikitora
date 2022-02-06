@@ -36,7 +36,7 @@
                   </li>
                   <li>
                     <i class="fa fa-tag"></i>
-                    <a href="/category/{{ $post->category->slug }}"> {{ $post->category->name }}</a>
+                    <a href="/categories/{{ $post->category->slug }}"> {{ $post->category->name }}</a>
                   </li>                  
                 </ul>
               </div>

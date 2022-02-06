@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Article;
+use App\Http\Controllers\ {
+  ArticleController as Article,
+  CategoryController as Category,
+  CommentController as Comment,
+  TagController as Tag
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -20,26 +25,45 @@ use App\Models\Article;
 // });
 
 
-Route::get('/', function (){
+
+Route::controller(Article::class)->group(function (){
+  Route::get('/blog', 'index');
+  Route::get('/blog/{post:slug}', 'post');
+});
+
+
+Route::get('/category/{category:slug}', [Category::class, 'index']);
+
+
+Route::get('/', function(){
   return view('pages.home', [
     'title' => 'A Living Robot'
   ]);
 });
 
-Route::get('/blog', function (){
-  return view('pages.posts', [
-    'title' => 'Blog Posts',
-    'posts' => Article::getAll()
+Route::get('/about', function(){ 
+  return view('pages.about', [
+    'title' => 'About Me'
+  ]); 
+});
+
+Route::get('/services', function(){ 
+  return view('pages.services', [
+    'title' => 'My Services'
+  ]); 
+});
+
+Route::get('/works', function(){ 
+  return view('pages.works', [
+    'title' => 'My Works'
   ]);
 });
 
-Route::get('/blog/{slug}', function ($slug){
-  $post = Article::getPost($slug);
-
-  return view('pages.post', [
-    'title' => $post['title'],
-    'post' => $post
+Route::get('/contact', function(){ 
+  return view('pages.contact', [
+    'title' => 'Contact Me'
   ]);
 });
+
 
 
