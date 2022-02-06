@@ -23,13 +23,6 @@
                   <li><a href="/#works">Works</a></li>
                   <li><a href="/blog">Blog</a></li>
                   <li><a href="/#contact">Contact</a></li>
-                  <!-- <li><a href="#">Dropdown <i class="ti-angle-down"></i></a>
-                    <ul class="submenu">
-                      <li><a href="works_details.html">Submenu 1</a></li>
-                      <li><a href="elements.html">Submenu 2</a></li>
-                      <li><a href="elements.html">Submenu 3</a></li>
-                    </ul>
-                  </li> -->
                 </ul>
               </nav>
             </div>

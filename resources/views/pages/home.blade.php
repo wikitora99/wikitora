@@ -36,7 +36,7 @@
       <div class="row">
         <div class="col-xl-10">
           <div class="download_text">
-            <h3>I am a Web Developer based on Jakarta, Indonesia. Loves clean code, modern & scalable architecture.</h3>
+            <h3>I'm a Web Developer based on Jakarta, Indonesia.<br>Loves coding and learn something new.</h3>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
             <div class="single_progress">
               <div class="label d-flex justify-content-between">
                 <span>Coding</span>
-                <span>70%</span>
+                <span><i class="fa fa-code"></i></span>
               </div>
                 <div class="progress">
                   <div class="progress-bar " role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -62,7 +62,7 @@
             <div class="single_progress">
               <div class="label d-flex justify-content-between">
                 <span>Design</span>
-                <span>90%</span>
+                <span><i class="fa fa-object-group"></i></span>
               </div>
               <div class="progress">
                 <div class="progress-bar " role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -71,7 +71,7 @@
             <div class="single_progress">
               <div class="label d-flex justify-content-between">
                 <span>Writing</span>
-                <span>80%</span>
+                <span><i class="fa fa-text-height"></i></span>
               </div>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -197,77 +197,68 @@
   <!-- Gallery Area-end  -->
 
 
-  <!-- Testimonial Area-start -->
-  <div class="testimonial_area ">
+  <!-- Contact Section-start -->
+  <section id="contact" class="contact-section section_padding">
     <div class="container">
       <div class="row">
-        <div class="col-xl-12">
-          <div class="section_title">
-            <h3>What Clients say</h3>
-          </div>
+        <div class="col-12">
+          <h2 class="contact-title">Get in Touch</h2>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="testmonial_active owl-carousel">
-            <div class="single_carousel">
-              <div class="row">
-                <div class="col-xl-9 col-md-9">
-                  <div class="single_testmonial">
-                    <p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour or randomised words which don’t look even slightly believable. If you are going to use a passage.</p>
-                    <div class="testmonial_author">
-                      <div class="thumb">
-                        <img src="img/case/testimonial.png" alt="Client" width="68" height="68" class="rounded-circle">
-                      </div>
-                      <div class="author_name">
-                        <h3>John Doe</h3>
-                        <span>Business Owner</span>
-                      </div>
-                    </div>
-                  </div>
+        <div class="col-lg-8">
+          <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Message'" placeholder = 'Your Message'></textarea>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name'" placeholder = 'Your name'>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" placeholder = 'Your email address'>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Subject'" placeholder = 'Your Subject'>
                 </div>
               </div>
             </div>
-            <div class="single_carousel">
-              <div class="row">
-                <div class="col-xl-9 col-md-9">
-                  <div class="single_testmonial">
-                    <p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour or randomised words which don’t look even slightly believable. If you are going to use a passage.</p>
-                    <div class="testmonial_author">
-                      <div class="thumb">
-                        <img src="img/case/testimonial.png" alt="Client" width="68" height="68" class="rounded-circle">
-                      </div>
-                      <div class="author_name">
-                        <h3>Fulan bin Fulan</h3>
-                        <span>Startup CEO</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="form-group mt-3">
+              <button type="submit" class="button button-contactForm btn_2 boxed-btn">Send Message</button>
             </div>
-            <div class="single_carousel">
-              <div class="row">
-                <div class="col-xl-9 col-md-9">
-                  <div class="single_testmonial">
-                    <p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour or randomised words which don’t look even slightly believable. If you are going to use a passage.</p>
-                    <div class="testmonial_author">
-                      <div class="thumb">
-                        <img src="img/case/testimonial.png" alt="Client" width="68" height="68" class="rounded-circle">
-                      </div>
-                      <div class="author_name">
-                        <h3>Satoshi Nakamoto</h3>
-                        <span>Project Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </form>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-home"></i></span>
+            <div class="media-body">
+              <h3>Jakarta, Indonesia</h3>
+              <p>St. Raya Bogor KM 32</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+            <div class="media-body">
+              <h3>(+62) 882 1001 2082</h3>
+              <p>Mon to Fri 6am to 6pm</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <div class="media-body">
+              <h3>wiki.tora99@gmail.com</h3>
+              <p>Send me your query anytime!</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- /Testimonial Area-end -->
+  </section>
+  <!-- Contact Section-end -->
 @endsection()

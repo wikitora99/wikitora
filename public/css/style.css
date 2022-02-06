@@ -2539,6 +2539,7 @@ h3 {
 
 /* line 38, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_download.scss */
 .download_area .progress_skills .single_progress .label span {
+  letter-spacing: 2px !important;
   font-size: 16px;
   color: #fff;
   font-weight: 400;
@@ -2671,6 +2672,7 @@ h3 {
 
 /* line 33, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_gallery.scss */
 .gallery_area .more_works a {
+  letter-spacing: 2px;
   display: block !important;
 }
 
@@ -3145,7 +3147,7 @@ h3 {
 
 /* line 16, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .contact-info__icon i, .contact-info__icon span {
-  color: #8f9195;
+  color: #ddd;
   font-size: 27px;
 }
 
@@ -3154,7 +3156,7 @@ h3 {
   font-size: 16px;
   margin-bottom: 0;
   font-size: 16px;
-  color: #2a2a2a;
+  color: #2CE8B9;
 }
 
 /* line 30, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
@@ -3188,7 +3190,7 @@ h3 {
 
 /* line 61, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .form-contact .form-control {
-  border: 1px solid #e5e6e9;
+  border: 1px solid #2CE8B9;
   border-radius: 0px;
   height: 48px;
   padding-left: 18px;
@@ -3205,7 +3207,7 @@ h3 {
 /* line 74, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .form-contact .form-control::placeholder {
   font-weight: 300;
-  color: #999999;
+  color: #ddd;
 }
 
 /* line 80, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
@@ -3263,6 +3265,7 @@ h3 {
 /* line 133, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .contact-section {
   padding: 130px 0 100px;
+  background-color: #0F243B;
 }
 
 @media (max-width: 991px) {
@@ -3281,15 +3284,16 @@ h3 {
 
 /* line 141, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .contact-section .btn_2 {
-  background-color: #191d34;
+  font-weight: 500;
+  background-color: transparent;
   padding: 18px 60px;
-  border-radius: 50px;
+  /*border-radius: 50px;*/
   margin-top: 0;
 }
 
 /* line 146, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .contact-section .btn_2:hover {
-  background-color: #ff5e13;
+  background-color: #2ce8b9;
 }
 
 /* line 75, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_elements.scss */
@@ -3320,7 +3324,10 @@ h1 {
 
 /* line 97, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_elements.scss */
 h2 {
-  font-size: 30px;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 32px !important;
+  font-weight: 500 !important;
 }
 
 /* line 101, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_elements.scss */
