@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ {
   ArticleController as Article,
   CategoryController as Category,
-  CommentController as Comment,
-  TagController as Tag
+  UserController as User
 };
 
 /*
@@ -34,6 +33,7 @@ Route::controller(Article::class)->group(function (){
 
 Route::get('/category/{category:slug}', [Category::class, 'index']);
 
+Route::get('/author/{author:username}', [User::class, 'index']);
 
 Route::get('/', function(){
   return view('pages.home', [

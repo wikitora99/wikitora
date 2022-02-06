@@ -14,7 +14,8 @@ class ArticleController extends Controller
   {
     return view('pages.posts', [
       'title' => 'Blog Area',
-      'posts' => Article::all()
+      'posts' => Article::with([
+        'author', 'category'])->latest()->get()
     ]);
   }
 

@@ -16,12 +16,13 @@ class ArticleFactory extends Factory
   {
 
     return [
-      'title' => $this->faker->sentence(mt_rand(6,8)),
+      'title' => $this->faker->sentence(mt_rand(6,10)),
       'slug' => $this->faker->slug(4),
-      'category' => mt_rand(1,5),
-      'cover' => 'cover ('.strval(mt_rand(1,5)).').png',
-      'excerpt' => $this->faker->sentence(25),
-      'body' => $this->faker->paragraph(mt_rand(5,8))
+      'user_id' => mt_rand(1,2),
+      'category_id' => mt_rand(1,5),
+      'cover' => 'cover-'.strval(mt_rand(1,15)).'.jpg',
+      'excerpt' => $this->faker->sentence(40, false),
+      'body' => $this->faker->paragraph(30, false)
     ];
   }
 }

@@ -21,7 +21,7 @@
               <ul class="blog-info-link mt-3 mb-4">
                 <li>
                   <i class="fa fa-user"></i>
-                  <a href="#"> {{ $post->user->name }}</a>
+                  <a href="/author/{{ $post->author->username }}"> {{ $post->author->name }}</a>
                 </li>
                 <li>
                   <i class="fa fa-tag"></i>

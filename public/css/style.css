@@ -2890,33 +2890,33 @@ h3 {
 
 /* line 36, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
 .bradcam_area.bradcam_area2 h3 {
-  font-size: 46px;
+  font-size: 30px;
   font-weight: 400;
 }
 
 @media (max-width: 767px) {
   /* line 36, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
   .bradcam_area.bradcam_area2 h3 {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 
 /* line 44, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
 .bradcam_area h3 {
-  font-size: 60px;
+  font-size: 48px;
   color: #fff;
   letter-spacing: 2px;
   padding-top: 40px;
   font-weight: 300;
   margin-bottom: 0;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 @media (max-width: 767px) {
   /* line 44, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
   .bradcam_area h3 {
     padding-top: 18px;
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -3323,7 +3323,7 @@ h1 {
 }
 
 /* line 97, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_elements.scss */
-h2 {
+.contact-section h2 {
   letter-spacing: 2px;
   color: #fff;
   font-size: 32px !important;
@@ -5811,7 +5811,7 @@ h6 {
   background: #F0F2F5;
   border-top: 1px solid #eee;
   padding: 45px 40px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 @media (max-width: 414px) {
@@ -5954,7 +5954,7 @@ h6 {
 /* line 1447, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .comment-form .form-control {
   /*border: 1px solid #2CE8B9;*/
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   height: 48px;
   padding-left: 18px;
   font-size: 13px;

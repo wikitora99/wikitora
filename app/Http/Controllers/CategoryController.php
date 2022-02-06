@@ -10,9 +10,10 @@ class CategoryController extends Controller
 
   public function index(Category $category)
   {
-    return view('pages.category', [
-      'title' => 'Blog Category: '.$category->name,
+    return view('pages.posts', [
+      'title' => $category->name.' Posts',
       'posts' => $category->posts
+                  ->load('category', 'author')
     ]);
   }
 
