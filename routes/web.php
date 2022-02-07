@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ {
   ArticleController as Article,
   CategoryController as Category,
-  UserController as Author
+  UserController as Author,
+  ContactController as Contact
 };
 
 /*
@@ -40,6 +41,8 @@ Route::prefix('/')->group(function(){
   Route::get('works', function(){ 
     return view('pages.works', ['title' => 'My Works']);
   });
+
+  Route::post('/contact', [Contact::class, 'send']);
 
 });
 

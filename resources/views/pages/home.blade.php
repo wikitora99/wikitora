@@ -3,7 +3,7 @@
 
 @section('content')
   <!-- Slider Area-start -->
-  <div id="top" class="slider_area">
+  <div class="slider_area">
     <div class="single_slider d-flex align-items-center slider_bg_1">
       <div class="container">
         <div class="row align-items-center position-relative">
@@ -204,27 +204,33 @@
         <div class="col-12">
           <h2 class="contact-title">Get in Touch</h2>
         </div>
+
+        @if(Session::has('status'))
+          <div class="alert alert-success">{{ Session::get('status') }}</div>
+        @endif
+
         <div class="col-lg-8">
-          <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+          <form class="form-contact contact_form" action="/contact" method="post" id="contactForm" novalidate="novalidate">
+            @csrf
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
-                  <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Message'" placeholder = 'Your Message'></textarea>
+                  <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Message'" placeholder = 'Your Message'></textarea>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name'" placeholder = 'Your name'>
+                  <input class="form-control" name="name" id="name" autocomplete="off" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your name'" placeholder = 'Your name'>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" placeholder = 'Your email address'>
+                  <input class="form-control" name="email" id="email" type="email" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" placeholder = 'Your email address'>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Subject'" placeholder = 'Your Subject'>
+                  <input class="form-control" name="subject" id="subject" type="text" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Subject'" placeholder = 'Your Subject'>
                 </div>
               </div>
             </div>
