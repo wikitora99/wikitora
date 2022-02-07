@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ {
   ArticleController as Article,
   CategoryController as Category,
-  UserController as User
+  UserController as Author
 };
 
 /*
@@ -19,21 +19,6 @@ use App\Http\Controllers\ {
 */
 
 
-// Route::get('/', function () {
-//   return view('welcome');
-// });
-
-
-
-Route::controller(Article::class)->group(function (){
-  Route::get('/blog', 'index');
-  Route::get('/blog/{post:slug}', 'post');
-});
-
-
-Route::get('/category/{category:slug}', [Category::class, 'index']);
-
-Route::get('/author/{author:username}', [User::class, 'index']);
 
 Route::get('/', function(){
   return view('pages.home', [
@@ -41,29 +26,21 @@ Route::get('/', function(){
   ]);
 });
 
-Route::get('/about', function(){ 
-  return view('pages.about', [
-    'title' => 'About Me'
-  ]); 
-});
 
-Route::get('/services', function(){ 
-  return view('pages.services', [
-    'title' => 'My Services'
-  ]); 
-});
+Route::prefix('/')->group(function(){
 
-Route::get('/works', function(){ 
-  return view('pages.works', [
-    'title' => 'My Works'
-  ]);
-});
+  Route::controller(Article::class)->group(function (){
+    Route::get('blog', 'index');
+    Route::get('blog/{post:slug}', 'post');
+  });
 
-Route::get('/contact', function(){ 
-  return view('pages.contact', [
-    'title' => 'Contact Me'
-  ]);
-});
+  Route::get('category/{category:slug}', [Category::class, 'index']);
+  Route::get('author/{author:username}', [Author::class, 'index']);
 
+  Route::get('works', function(){ 
+    return view('pages.works', ['title' => 'My Works']);
+  });
+
+});
 
 

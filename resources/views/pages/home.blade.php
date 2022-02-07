@@ -3,7 +3,7 @@
 
 @section('content')
   <!-- Slider Area-start -->
-  <div class="slider_area">
+  <div id="top" class="slider_area">
     <div class="single_slider d-flex align-items-center slider_bg_1">
       <div class="container">
         <div class="row align-items-center position-relative">
