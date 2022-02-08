@@ -3166,7 +3166,7 @@ h3 {
 
 /* line 36, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .contact-info .media-body p {
-  color: #8a8a8a;
+  color: #ddd;
 }
 
 /*=================== contact banner end ====================*/
@@ -3190,6 +3190,7 @@ h3 {
 
 /* line 61, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_contact.scss */
 .form-contact .form-control {
+  color: #ccc !important;
   border: 1px solid #2CE8B9;
   border-radius: 0px;
   height: 48px;

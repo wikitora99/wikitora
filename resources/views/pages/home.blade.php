@@ -210,12 +210,12 @@
         @endif
 
         <div class="col-lg-8">
-          <form class="form-contact contact_form" action="/contact" method="post" id="contactForm" novalidate="novalidate">
+          <form class="form-contact contact_form" action="/sendmail" method="post" id="contactForm" novalidate="novalidate">
             @csrf
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
-                  <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Message'" placeholder = 'Your Message'></textarea>
+                  <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your message'" placeholder = 'Your message'></textarea>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -230,7 +230,7 @@
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Subject'" placeholder = 'Your Subject'>
+                  <input class="form-control" name="subject" id="subject" type="text" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your subject'" placeholder = 'Your subject'>
                 </div>
               </div>
             </div>

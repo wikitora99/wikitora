@@ -42,7 +42,7 @@ Route::prefix('/')->group(function(){
     return view('pages.works', ['title' => 'My Works']);
   });
 
-  Route::post('/contact', [Contact::class, 'send']);
+  Route::post('/sendmail', [Contact::class, 'send']);
 
 });
 

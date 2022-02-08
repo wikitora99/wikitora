@@ -112,7 +112,7 @@
   <!-- <script src="/js/gijgo.min.js"></script> -->
   <script src="/js/slick.min.js"></script>
 
-  <!-- Typed -->
+  <!-- Typed JS -->
   <script src="/js/typed.min.js"></script>
 
   <!-- Contact JS -->

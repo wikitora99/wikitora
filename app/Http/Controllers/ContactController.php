@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use Mail;
 
 class ContactController extends Controller
 {
@@ -13,10 +12,10 @@ class ContactController extends Controller
   {
 
     $validateData = $request->validate([
-      'message' => ['required', 'min:5'],
-      'name' => ['required', 'min:3', 'max:255'],
-      'email' => ['required', 'email:dns'],
-      'subject' => ['required', 'min:5', 'max:255']
+      'message' => 'required|min:5',
+      'name' => 'required|min:3',
+      'email' => 'required|email:dns',
+      'subject' => 'required|min:5|max:255'
     ]);
 
     dd('Your message has been sent!');
