@@ -45,7 +45,8 @@
           @endforeach()
 
             <!-- Pagination -->
-            <nav class="blog-pagination justify-content-center d-flex">
+            {{ $posts->links() }}
+            <!-- <nav class="blog-pagination justify-content-center d-flex">
               <ul class="pagination">
                 <li class="page-item">
                   <a href="#" class="page-link" aria-label="Previous">
@@ -64,7 +65,7 @@
                   </a>
                 </li>
               </ul>
-            </nav>            
+            </nav>             -->
           </div>
         </div>
         <!-- Posts Area-end -->

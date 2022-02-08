@@ -17,7 +17,7 @@ class ArticleController extends Controller
       'title' => 'Blog Area',
       'posts' => Article::newest()
                   ->filter(request(['search', 'category', 'author']))
-                  ->get(),
+                  ->paginate(5)->withQueryString(),
       'popular' => Article::popular()->get(),
       'categories' => Category::all()
     ]);
