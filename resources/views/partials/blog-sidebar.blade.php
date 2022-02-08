@@ -3,6 +3,9 @@
   <div class="blog_right_sidebar">
     <aside class="single_sidebar_widget search_widget">
       <form action="/blog" method="get">
+      @if(request('category'))
+        <input type="hidden" name="category" value="{{ request('category') }}">
+      @endif
         <div class="form-group">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder='Search here...' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here...'" name="search" value="{{ request('search') }}">
@@ -21,7 +24,7 @@
       <ul class="list cat-list">
       @foreach($categories as $category)
         <li>        
-          <a href="/category/{{ $category->slug }}" class="d-flex">
+          <a href="/blog?category={{ $category->slug }}" class="d-flex">
             <p>{{ $category->name }} ({{ $category->posts->count() }})</p>
           </a>
         </li>

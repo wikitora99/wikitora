@@ -16,7 +16,7 @@ class ArticleController extends Controller
     return view('pages.posts', [
       'title' => 'Blog Area',
       'posts' => Article::newest()
-                  ->filter(request(['search', 'category']))
+                  ->filter(request(['search', 'category', 'author']))
                   ->get(),
       'popular' => Article::popular()->get(),
       'categories' => Category::all()

@@ -35,9 +35,6 @@ Route::prefix('/')->group(function(){
     Route::get('blog/{post:slug}', 'post');
   });
 
-  Route::get('category/{category:slug}', [Category::class, 'index']);
-  Route::get('author/{author:username}', [Author::class, 'index']);
-
   Route::get('works', function(){ 
     return view('pages.works', ['title' => 'My Works']);
   });

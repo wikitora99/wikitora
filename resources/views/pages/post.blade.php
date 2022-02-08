@@ -21,11 +21,11 @@
               <ul class="blog-info-link mt-3 mb-4">
                 <li>
                   <i class="fa fa-user"></i>
-                  <a href="/author/{{ $post->author->username }}"> {{ $post->author->name }}</a>
+                  <a href="/blog?author={{ $post->author->username }}"> {{ $post->author->name }}</a>
                 </li>
                 <li>
                   <i class="fa fa-tag"></i>
-                  <a href="/category/{{ $post->category->slug }}"> {{ $post->category->name }}</a>
+                  <a href="/blog?category={{ $post->category->slug }}"> {{ $post->category->name }}</a>
                 </li>
                 <li>
                   <i class="fa fa-calendar"></i>
