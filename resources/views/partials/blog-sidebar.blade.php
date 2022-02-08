@@ -2,10 +2,10 @@
 <div class="col-lg-4">
   <div class="blog_right_sidebar">
     <aside class="single_sidebar_widget search_widget">
-      <form action="#">
+      <form action="/blog" method="get">
         <div class="form-group">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder='Search anything here...' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here...'">
+            <input type="text" class="form-control" placeholder='Search here...' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here...'" name="search" value="{{ request('search') }}">
             <div class="input-group-append">
               <button class="btn" type="button"><i class="ti-search"></i></button>
             </div>
@@ -15,87 +15,37 @@
       </form>
     </aside>
 
+  @if($categories)
     <aside class="single_sidebar_widget post_category_widget">
       <h4 class="widget_title">Category</h4>
       <ul class="list cat-list">
-        <li>
-          <a href="#" class="d-flex">
-            <p>Resaurant food</p>
-            <p>(37)</p>
+      @foreach($categories as $category)
+        <li>        
+          <a href="/category/{{ $category->slug }}" class="d-flex">
+            <p>{{ $category->name }} ({{ $category->posts->count() }})</p>
           </a>
         </li>
-        <li>
-          <a href="#" class="d-flex">
-            <p>Travel news</p>
-            <p>(10)</p>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="d-flex">
-            <p>Modern technology</p>
-            <p>(03)</p>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="d-flex">
-            <p>Product</p>
-            <p>(11)</p>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="d-flex">
-            <p>Inspiration</p>
-            <p>21</p>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="d-flex">
-            <p>Health Care (21)</p>
-            <p>09</p>
-          </a>
-        </li>
+      @endforeach
       </ul>
     </aside>
+  @endif
 
+  @if($popular)
     <aside class="single_sidebar_widget popular_post_widget">
       <h3 class="widget_title">Popular Post</h3>
+    @foreach($popular as $post)
       <div class="media post_item">
-        <img src="/img/post/post_1.png" alt="post">
+        <img src="/img/blog/cover/{{ $post->cover }}" alt="Post Thumbnail">
         <div class="media-body">
-          <a href="single-blog.html">
-            <h3>From life was you fish...</h3>
+          <a href="/blog/{{ $post->slug }}">
+            <h3>{{ Str::limit($post->title, 30) }}</h3>
           </a>
-          <p>January 12, 2019</p>
+          <p>{{ $post->published_at->diffForHumans() }}</p>
         </div>
       </div>
-      <div class="media post_item">
-        <img src="/img/post/post_2.png" alt="post">
-        <div class="media-body">
-          <a href="single-blog.html">
-            <h3>The Amazing Hubble</h3>
-          </a>
-          <p>02 Hours ago</p>
-        </div>
-      </div>
-      <div class="media post_item">
-        <img src="/img/post/post_3.png" alt="post">
-        <div class="media-body">
-          <a href="single-blog.html">
-            <h3>Astronomy Or Astrology</h3>
-          </a>
-          <p>03 Hours ago</p>
-        </div>
-      </div>
-      <div class="media post_item">
-        <img src="/img/post/post_4.png" alt="post">
-        <div class="media-body">
-          <a href="single-blog.html">
-            <h3>Asteroids telescope</h3>
-          </a>
-          <p>01 Hours ago</p>
-        </div>
-      </div>
+    @endforeach  
     </aside>
+  @endif
 
     <aside class="single_sidebar_widget tag_cloud_widget">
       <h4 class="widget_title">Tag Clouds</h4>

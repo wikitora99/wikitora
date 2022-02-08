@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\ { Category, Article };
 
 class CategoryController extends Controller
 {
@@ -13,7 +13,9 @@ class CategoryController extends Controller
     return view('pages.posts', [
       'title' => $category->name.' Posts',
       'posts' => $category->posts
-                  ->load('category', 'author')
+                  ->load('category', 'author'),
+      'popular' => Article::popular()->get(),
+      'categories' => Category::all()
     ]);
   }
 

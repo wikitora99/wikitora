@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration
       $table->string('cover');
       $table->text('excerpt');
       $table->text('body');
+      $table->bigInteger('views');
       $table->timestamp('published_at')
             ->nullable();
       $table->timestamps();

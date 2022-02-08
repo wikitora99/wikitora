@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Article;
+use App\Models\Category;
 
 
 class ArticleController extends Controller
@@ -14,7 +15,11 @@ class ArticleController extends Controller
   {
     return view('pages.posts', [
       'title' => 'Blog Area',
-      'posts' => Article::latest()->get()
+      'posts' => Article::newest()
+                  ->filter(request(['search', 'category']))
+                  ->get(),
+      'popular' => Article::popular()->get(),
+      'categories' => Category::all()
     ]);
   }
 
@@ -22,7 +27,9 @@ class ArticleController extends Controller
   {
     return view('pages.post', [
       'title' => $post->title,
-      'post' => $post
+      'post' => $post,
+      'popular' => Article::popular()->get(),
+      'categories' => Category::all()
     ]);
   }
 

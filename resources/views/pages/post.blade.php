@@ -27,6 +27,10 @@
                   <i class="fa fa-tag"></i>
                   <a href="/category/{{ $post->category->slug }}"> {{ $post->category->name }}</a>
                 </li>
+                <li>
+                  <i class="fa fa-calendar"></i>
+                  <p>{{ $post->published_at->format('d-M-Y') }}</p>
+                </li>
               </ul>
               <p class="excert">
                 {{ $post->body }}

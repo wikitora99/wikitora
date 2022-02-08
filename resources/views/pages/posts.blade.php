@@ -10,25 +10,26 @@
     <div class="container">
       <div class="row">
 
+      @if($posts)
         <!-- Posts Area-start -->
         <div class="col-lg-8 mb-5 mb-lg-0">
-          <div class="blog_left_sidebar">
+          <div class="blog_left_sidebar">          
 
             <!-- Article -->
-            @foreach($posts as $post)
+          @foreach($posts as $post)
             <article class="blog_item">
               <div class="blog_item_img">
                 <img class="card-img rounded-0" src="/img/blog/cover/{{ $post->cover }}" alt="Post thumbnail">
                 <span class="blog_item_date">
-                  <h3>19</h3>
-                  <p>Apr</p>
+                  <h3>{{ $post->published_at->format('M') }}</h3>
+                  <p>{{ $post->published_at->format('d') }}</p>
                 </span>
               </div>
               <div class="blog_details">
                 <a class="d-inline-block" href="/blog/{{ $post->slug }}">
                   <h2>{{ $post->title }}</h2>
                 </a>
-                <p>{{ $post->excerpt }}</p>
+                <p>{{ Str::limit($post->excerpt, 150) }}</p>
                 <ul class="blog-info-link">
                   <li>
                     <i class="fa fa-user"></i>
@@ -41,7 +42,7 @@
                 </ul>
               </div>
             </article>
-            @endforeach()
+          @endforeach()
 
             <!-- Pagination -->
             <nav class="blog-pagination justify-content-center d-flex">
@@ -67,6 +68,9 @@
           </div>
         </div>
         <!-- Posts Area-end -->
+      @else
+        <h2>No Post Found!</h2>
+      @endif
 
         @include('partials.blog-sidebar')
 

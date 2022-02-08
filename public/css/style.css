@@ -5205,9 +5205,10 @@ h6 {
 
 /* line 600, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog_item_img .blog_item_date {
+  text-align: center;
   position: absolute;
   bottom: -10px;
-  left: 10px;
+  /*left: 10px;*/
   display: block;
   color: #2CE8B9;
   background-color: #0A1A2F;
@@ -5287,7 +5288,7 @@ h6 {
   height: 50px;
   border-color: #2CE8B9;
   font-size: 13px;
-  color: #999999;
+  color: #0A1A2F;
   padding-left: 20px;
   border-radius: 0;
   border-right: 0;
@@ -5295,7 +5296,7 @@ h6 {
 
 /* line 682, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog_right_sidebar .search_widget .form-control::placeholder {
-  color: #999999;
+  color: #0A1A2F;
 }
 
 /* line 686, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
@@ -5393,6 +5394,13 @@ h6 {
   justify-content: center;
   align-self: center;
   padding-left: 20px;
+}
+
+.blog_right_sidebar .popular_post_widget .post_item img {
+  /*width: 100%;*/
+  width: 80px;
+  height: 80px;
+  object-fit: cover !important;
 }
 
 /* line 797, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */

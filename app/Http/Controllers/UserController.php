@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\ { User, Article };
 
 class UserController extends Controller
 {
@@ -14,6 +14,8 @@ class UserController extends Controller
       'title' => 'Posted by '.$author->name,
       'posts' => $author->posts
                   ->load('category', 'author')
+      'popular' => Article::popular()->get(),
+      'categories' => Category::all()
     ]);
   }
 

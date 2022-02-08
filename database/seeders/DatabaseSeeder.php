@@ -3,13 +3,14 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use App\Models\ {
     User,
     Article,
     Category
 };
 
-use Faker\Factory as Faker;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,42 +24,40 @@ class DatabaseSeeder extends Seeder
 
     // User::factory(5)->create();
     // Category::factory(10)->create();
-    Article::factory(10)->create();
+    Article::factory(50)->create();
 
-    $faker = Faker::create();
 
-    User::create([
-      'name' => 'Wikidev',
-      'email' => 'hello@wikitora.dev',
-      'username' => 'wikidev',
-      'password' => bcrypt('passwordku123')
-    ]);
     User::create([
       'name' => 'Okitora Winnetou',
-      'email' => 'wiki.tora99@gmail.com',
+      'email' => 'hello@wikidev.com',
       'username' => 'wikitora',
-      'password' => bcrypt('passwordku123')
+      'password' => Hash::make('password')
+    ]);
+    User::create([
+      'name' => 'Fulan bin Fulan',
+      'email' => 'iamfulan@gmail.com',
+      'username' => 'fulan999',
+      'password' => Hash::make('password')
+    ]);
+    User::create([
+      'name' => 'John Doe',
+      'email' => 'doe69john@yahoo.co.id',
+      'username' => 'doejhon',
+      'password' => Hash::make('password')
     ]);
 
-    Category::create([
-      'name' => 'Technology',
-      'slug' => 'technology'
-    ]);
-    Category::create([
-      'name' => 'Nature',
-      'slug' => 'nature'
-    ]);
-    Category::create([
-      'name' => 'Architecture',
-      'slug' => 'architecture'
-    ]);
-    Category::create([
-      'name' => 'Tips & Trick',
-      'slug' => 'tips-trick'
-    ]);
-    Category::create([
-      'name' => 'Design',
-      'slug' => 'design'
-    ]);    
+    
+    $categories = [
+      'Technology', 'Nature', 
+      'Career', 'Economy', 
+      'Design', 'Astronomy'];
+
+    for ($i = 0; $i < count($categories); $i++){
+      Category::create([
+        'name' => $categories[$i],
+        'slug' => Str::slug($categories[$i])
+      ]); 
+    }
+    
   }
 }
