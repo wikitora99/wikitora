@@ -29,7 +29,7 @@
                 <a class="d-inline-block" href="/blog/{{ $post->slug }}">
                   <h2>{{ $post->title }}</h2>
                 </a>
-                <p>{{ Str::limit($post->excerpt, 150) }}</p>
+                <p>{{ $post->excerpt }}...</p>
                 <ul class="blog-info-link">
                   <li>
                     <i class="fa fa-user"></i>

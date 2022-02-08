@@ -24,7 +24,7 @@ class Article extends Model
 
   public function scopePopular()
   {
-    return $this->orderBy('views', 'asc')->limit(5);
+    return $this->orderBy('views', 'desc')->limit(5);
   }
 
 

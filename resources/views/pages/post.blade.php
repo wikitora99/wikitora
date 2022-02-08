@@ -29,7 +29,7 @@
                 </li>
                 <li>
                   <i class="fa fa-calendar"></i>
-                  <p>{{ $post->published_at->format('d-M-Y') }}</p>
+                  <a>{{ $post->published_at->format('d M Y') }}</a>
                 </li>
               </ul>
               <p class="excert">

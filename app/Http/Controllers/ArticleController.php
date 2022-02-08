@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use App\Models\Article;
-use App\Models\Category;
+use App\Models\ {
+  Article, 
+  Category,
+  Tag
+};
 
 
 class ArticleController extends Controller
@@ -19,7 +22,8 @@ class ArticleController extends Controller
                   ->filter(request(['search', 'category', 'author']))
                   ->paginate(5)->withQueryString(),
       'popular' => Article::popular()->get(),
-      'categories' => Category::all()
+      'categories' => Category::all(),
+      'tags' => Tag::all()
     ]);
   }
 
@@ -29,7 +33,8 @@ class ArticleController extends Controller
       'title' => $post->title,
       'post' => $post,
       'popular' => Article::popular()->get(),
-      'categories' => Category::all()
+      'categories' => Category::all(),
+      'tags' => Tag::all()
     ]);
   }
 

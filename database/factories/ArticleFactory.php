@@ -16,14 +16,14 @@ class ArticleFactory extends Factory
   {
 
     return [
-      'title' => $this->faker->sentence(mt_rand(6,8)),
+      'title' => $this->faker->unique()->sentence(mt_rand(6,8)),
       'slug' => $this->faker->unique()->slug(4),
       'user_id' => mt_rand(1,3),
-      'category_id' => mt_rand(1,6),
-      'cover' => 'cover-'.strval(mt_rand(1,15)).'.jpg',
-      'excerpt' => $this->faker->sentence(40, false),
-      'body' => $this->faker->paragraph(30, false),
-      'views' => $this->faker->numberBetween(100, 1000),
+      'category_id' => mt_rand(1,8),
+      'cover' => 'cover-'.strval(mt_rand(1,20)).'.jpg',
+      'excerpt' => $this->faker->sentence(30, false),
+      'body' => $this->faker->paragraph(50, false),
+      'views' => $this->faker->numberBetween(100, 5000),
       'published_at' => $this->faker->dateTimeThisYear()
     ];
   }
