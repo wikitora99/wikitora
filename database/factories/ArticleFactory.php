@@ -23,6 +23,7 @@ class ArticleFactory extends Factory
       'cover' => 'cover-'.strval(mt_rand(1,20)).'.jpg',
       'excerpt' => $this->faker->sentence(30, false),
       'body' => $this->faker->paragraph(50, false),
+      // 'body' => collect($this->faker->sentence(40)),
       'views' => $this->faker->numberBetween(100, 5000),
       'published_at' => $this->faker->dateTimeThisYear()
     ];

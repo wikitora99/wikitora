@@ -16,11 +16,14 @@ class ArticleController extends Controller
   
   public function index()
   {
+    $posts = Article::newest()
+              ->filter(request([
+                'search', 'category', 'author']))
+              ->paginate(5)->withQueryString();
+
     return view('pages.posts', [
       'title' => 'Blog Area',
-      'posts' => Article::newest()
-                  ->filter(request(['search', 'category', 'author']))
-                  ->paginate(5)->withQueryString(),
+      'posts' => $posts,
       'popular' => Article::popular()->get(),
       'categories' => Category::all(),
       'tags' => Tag::all()

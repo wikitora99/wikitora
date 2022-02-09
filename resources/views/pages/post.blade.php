@@ -33,7 +33,7 @@
                 </li>
               </ul>
               <p class="excert">
-                {{ $post->body }}
+                {!! $post->body !!}
               </p>
             </div>
           </div>

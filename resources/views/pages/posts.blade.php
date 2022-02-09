@@ -9,14 +9,13 @@
   <section class="blog_area section-padding">
     <div class="container">
       <div class="row">
-
-      @if($posts)
+      
         <!-- Posts Area-start -->
         <div class="col-lg-8 mb-5 mb-lg-0">
           <div class="blog_left_sidebar">          
 
-            <!-- Article -->
-          @foreach($posts as $post)
+          @forelse($posts as $post)
+            <!-- Article -->          
             <article class="blog_item">
               <div class="blog_item_img">
                 <img class="card-img rounded-0" src="/img/blog/cover/{{ $post->cover }}" alt="Post thumbnail">
@@ -41,37 +40,21 @@
                   </li>                  
                 </ul>
               </div>
-            </article>
-          @endforeach()
+            </article>            
+            
+          @empty
+            <div class="no_data">
+              <h2>No post found!</h2>
+            </div>        
+          @endforelse  
 
-            <!-- Pagination -->
-            {{ $posts->links() }}
-            <!-- <nav class="blog-pagination justify-content-center d-flex">
-              <ul class="pagination">
-                <li class="page-item">
-                  <a href="#" class="page-link" aria-label="Previous">
-                    <i class="ti-angle-left"></i>
-                  </a>
-                </li>
-                <li class="page-item active">
-                  <a href="#" class="page-link">1</a>
-                </li>
-                <li class="page-item">
-                  <a href="#" class="page-link">2</a>
-                </li>
-                <li class="page-item">
-                  <a href="#" class="page-link" aria-label="Next">
-                    <i class="ti-angle-right"></i>
-                  </a>
-                </li>
-              </ul>
-            </nav>             -->
+          @if($posts)
+            {{ $posts->onEachSide(2)->links() }}
+          @endif
+
           </div>
         </div>
         <!-- Posts Area-end -->
-      @else
-        <h2>No Post Found!</h2>
-      @endif
 
         @include('partials.blog-sidebar')
 
