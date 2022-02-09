@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
     // User::factory(5)->create();
     // Category::factory(10)->create();
-    Article::factory(2)->create();
+    Article::factory(48)->create();
 
 
     // $categories = [
