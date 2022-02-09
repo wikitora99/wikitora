@@ -5523,6 +5523,20 @@ h6 {
   margin-right: 10px;
 }
 
+.blog-pagination .page-info {
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  padding: 0;
+  text-align: center;
+  margin-left: -1px;
+  line-height: 45px;
+  height: 45px;
+  color: #565f6b !important;
+  margin: 0 15px 0 5px; 
+}
+
 /* line 1006, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_blog.scss */
 .blog-pagination .page-link i,
 .blog-pagination .page-link span {

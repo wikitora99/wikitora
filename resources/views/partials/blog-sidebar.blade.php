@@ -41,7 +41,7 @@
         <img src="/img/blog/cover/{{ $post->cover }}" alt="Post Thumbnail">
         <div class="media-body">
           <a href="/blog/{{ $post->slug }}">
-            <h3>{{ Str::limit($post->title, 30) }}</h3>
+            <h3>{{ Str::limit($post->title, 40) }}</h3>
           </a>
           <p>{{ $post->published_at->diffForHumans() }}</p>
         </div>

@@ -49,7 +49,7 @@
           @endforelse  
 
           @if($posts)
-            {{ $posts->onEachSide(2)->links() }}
+            {{ $posts->onEachSide(3)->links('partials.paginate') }}
           @endif
 
           </div>
