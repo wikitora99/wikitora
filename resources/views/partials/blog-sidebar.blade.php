@@ -3,7 +3,7 @@
   <div class="blog_right_sidebar">
     <aside class="single_sidebar_widget search_widget">
       <form action="/blog" method="get">
-      @if(request('category'))
+      @if (request('category'))
         <input type="hidden" name="category" value="{{ request('category') }}">
       @endif
         <div class="form-group">
@@ -22,10 +22,10 @@
     <aside class="single_sidebar_widget post_category_widget">
       <h4 class="widget_title">Category</h4>
       <ul class="list cat-list">
-      @foreach($categories as $category)
+      @foreach ($categories as $cat)
         <li>        
-          <a href="/blog?category={{ $category->slug }}" class="d-flex">
-            <p>{{ $category->name }} ({{ $category->posts->count() }})</p>
+          <a href="/blog?category={{ $cat->slug }}" class="d-flex">
+            <p>{{ $cat->name }} ({{ $cat->total }})</p>
           </a>
         </li>
       @endforeach
@@ -33,7 +33,7 @@
     </aside>
   @endif
 
-  @if($popular)
+  @if ($popular)
     <aside class="single_sidebar_widget popular_post_widget">
       <h3 class="widget_title">Popular Post</h3>
     @foreach($popular as $post)
@@ -53,24 +53,14 @@
     <aside class="single_sidebar_widget tag_cloud_widget">
       <h4 class="widget_title">Tag Clouds</h4>
       <ul class="list">
-      @foreach($tags as $tag)
+      @foreach ($tags as $tag)
         <li>
           <a href="/blog?tag={{ $tag->slug }}">{{ $tag->name }}</a>
         </li>
       @endforeach
       </ul>
-    </aside>            
-
-    <aside class="single_sidebar_widget newsletter_widget">
-      <h4 class="widget_title">Newsletter</h4>
-
-      <form action="#">
-        <div class="form-group">
-          <input type="email" class="form-control" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-        </div>
-        <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">Subscribe</button>
-      </form>
-    </aside>
+    </aside>  
+    
   </div>
 </div>
 <!-- Sidebar-end -->

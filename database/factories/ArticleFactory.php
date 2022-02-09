@@ -19,7 +19,7 @@ class ArticleFactory extends Factory
       'title' => $this->faker->unique()->sentence(mt_rand(6,8)),
       'slug' => $this->faker->unique()->slug(4),
       'user_id' => mt_rand(1,3),
-      'category_id' => mt_rand(1,8),
+      'category_id' => 1,
       'cover' => 'cover-'.strval(mt_rand(1,20)).'.jpg',
       'excerpt' => $this->faker->sentence(30, false),
       'body' => $this->faker->paragraph(50, false),

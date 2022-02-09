@@ -25,7 +25,7 @@ class ArticleController extends Controller
       'title' => 'Blog Area',
       'posts' => $posts,
       'popular' => Article::popular()->get(),
-      'categories' => Category::all(),
+      'categories' => Category::reorder()->get(),
       'tags' => Tag::all()
     ]);
   }
@@ -36,7 +36,7 @@ class ArticleController extends Controller
       'title' => $post->title,
       'post' => $post,
       'popular' => Article::popular()->get(),
-      'categories' => Category::all(),
+      'categories' => Category::reorder()->get(),
       'tags' => Tag::all()
     ]);
   }
