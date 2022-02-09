@@ -2916,7 +2916,7 @@ h3 {
   /* line 44, ../../Arafath/CL/Cl November/228. Resume-02/HTML/scss/_bradcam.scss */
   .bradcam_area h3 {
     padding-top: 18px;
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 
@@ -4657,9 +4657,15 @@ h6 {
   font-weight: 500;
 }
 
-@media only screen and (max-width: 480px) {
-  .no_data h2 {
-    font-size: 12px;
+@media (max-width: 767px) {
+  .blog_area .no_data h2 {
+    font-size: 16px;
+    text-shadow: 0px 12px 0px #39cccc;
+    letter-spacing: 1.2px;
+  }
+  .blog_area .no_data span {
+    margin-top: 26px; 
+    font-weight: 300;
   }
 }
 

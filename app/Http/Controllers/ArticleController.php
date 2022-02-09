@@ -15,14 +15,25 @@ class ArticleController extends Controller
 {
   
   public function index()
-  {
+  {    
+
+    $title = '';
+
+    if (request('search')){
+      $title = " with '".request('search')."'";
+    }else if (request('category')){
+      $title = " in '".request('category')."'";
+    }else if (request('author')){
+      $title = " by '".request('author')."'";
+    }
+
     $posts = Article::newest()
               ->filter(request([
                 'search', 'category', 'author']))
               ->paginate(5)->withQueryString();
 
     return view('pages.posts', [
-      'title' => 'Blog Area',
+      'title' => 'All Post'.$title,
       'posts' => $posts,
       'popular' => Article::popular()->get(),
       'categories' => Category::reorder()->get(),

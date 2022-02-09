@@ -15,16 +15,9 @@
           <!-- Main Menu -->
           <div class="col-xl-6 col-lg-7">
             <div class="main-menu  d-none d-lg-block">
-              <nav>
-                <ul id="navigation">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/#about">About</a></li>
-                  <li><a href="/#services">Services</a></li>
-                  <li><a href="/#works">Works</a></li>
-                  <li><a href="/blog">Blog</a></li>
-                  <li><a href="/#contact">Contact</a></li>
-                </ul>
-              </nav>
+              
+              @include('pages.partial.navbar')
+
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 
-@extends('layouts.main')
+@extends('pages.layout.main')
 
 @section('content')
   <!-- Slider Area-start -->

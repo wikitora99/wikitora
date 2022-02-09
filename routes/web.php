@@ -39,7 +39,9 @@ Route::prefix('/')->group(function(){
     return view('pages.works', ['title' => 'My Works']);
   });
 
-  Route::post('/sendmail', [Contact::class, 'send']);
+  Route::get('login', [Auth::class, 'index']);
+  Route::post('login', [Auth::class, 'login']);
+
 
 });
 
