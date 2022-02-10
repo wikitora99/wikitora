@@ -50,6 +50,12 @@ Route::name('dashboard.')->group(function() {
     Route::post('/register', 'store')->name('postRegister');
   });  
 
+  Route::get('/dashboard', function(){
+    return view('dashboard.home', [
+      'title' => 'Dashboard'
+    ]);
+  })->name('home');
+
 });
 
 
