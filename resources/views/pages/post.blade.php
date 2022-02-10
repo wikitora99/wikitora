@@ -32,9 +32,9 @@
                   <a>{{ $post->published_at->format('d M Y') }}</a>
                 </li>
               </ul>
-              <p class="excert">
+              <span class="excert">
                 {!! $post->body !!}
-              </p>
+              </span>
             </div>
           </div>
           <!-- Article Detail-end -->
@@ -158,7 +158,7 @@
         </div>
         <!-- Single Post Area-end -->
         
-        @include('partials.blog-sidebar')
+        @include('partials.sidebar')
 
        </div>
     </div>

@@ -3,7 +3,7 @@
 
 @section('content')
 
-  @include('partials.blog-slider')
+  @include('partials.slider')
 
   <!--=============== Blog Area =================-->
   <section class="blog_area section-padding">
@@ -17,7 +17,7 @@
           @if ($posts->count())
 
             @foreach ($posts as $post)
-              <!-- Article -->          
+              <!-- Article -->
               <article class="blog_item">
                 <div class="blog_item_img">
                   <img class="card-img rounded-0" src="/img/blog/cover/{{ $post->cover }}" alt="Post thumbnail">
@@ -30,7 +30,7 @@
                   <a class="d-inline-block" href="/blog/{{ $post->slug }}">
                     <h2>{{ $post->title }}</h2>
                   </a>
-                  <p>{{ $post->excerpt }}...</p>
+                  <p>{{ $post->excerpt }}..</p>
                   <ul class="blog-info-link">
                     <li>
                       <i class="fa fa-user"></i>
@@ -45,7 +45,7 @@
               </article>   
             @endforeach         
           
-            {{ $posts->onEachSide(2)->links('partials.paginate') }}
+            {{ $posts->onEachSide(2)->links('partials.pagination') }}
 
           @else
             <div class="no_data">
@@ -60,7 +60,7 @@
         </div>
         <!-- Posts Area-end -->
 
-        @include('partials.blog-sidebar')
+        @include('partials.sidebar')
 
       </div>
     </div>
