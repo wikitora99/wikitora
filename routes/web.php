@@ -20,28 +20,37 @@ use App\Http\Controllers\ {
 
 
 
-Route::get('/', function(){
+Route::get('/', function() {
   return view('pages.home', [
     'title' => 'A Living Robot'
   ]);
 });
 
-Route::controller(Article::class)->group(function (){
+Route::controller(Article::class)->group(function() {
   Route::get('/blog', 'index');
   Route::get('/blog/{post:slug}', 'post');
 });
 
-Route::get('/works', function(){ 
+Route::get('/works', function() { 
   return view('pages.works', [
     'title' => 'My Works'
   ]);
 });
 
-Route::get('/login', [Auth::class, 'index']);
-Route::post('/login', [Auth::class, 'login']);
 
-Route::get('/register', [Regist::class, 'index']);
-Route::post('/register', [Regist::class, 'register']);
+Route::name('dashboard.')->group(function() {
+
+  Route::controller(Auth::class)->group(function() {
+    Route::get('/login', 'index')->name('login');
+    Route::post('/login', 'login')->name('postLogin');
+  });  
+
+  Route::controller(Regist::class)->group(function() {
+    Route::get('/register', 'index')->name('register');
+    Route::post('/register', 'store')->name('postRegister');
+  });  
+
+});
 
 
 
