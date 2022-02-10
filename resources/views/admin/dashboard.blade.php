@@ -1,5 +1,5 @@
 
-@extends('dashboard.layouts.man')
+@extends('admin.layouts.main')
 
 @section('content')
   <div class="container-fluid">

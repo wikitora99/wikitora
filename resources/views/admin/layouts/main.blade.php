@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  @include('dashboard.layouts.head')
+  @include('admin.layouts.head')
 </head>
 
 <body>
@@ -638,13 +638,13 @@
 
     <!-- Header-start -->
     <div class="header">
-      @include('dashboard.layouts.header')
+      @include('admin.layouts.header')
     </div>
     <!-- Header-end -->
 
     <!-- Sidebar-start -->
     <div class="deznav">
-      @include('dashboard.layouts.sidebar')
+      @include('admin.layouts.sidebar')
     </div>
     <!-- Sidebar-end -->
 
@@ -655,13 +655,13 @@
     <!-- Main Content-end -->
 
     <!-- Footer-start -->
-    @include('dashboard.layouts.footer')
+    @include('admin.layouts.footer')
     <!-- Footer-end -->
       
   </div>
   <!-- Main Wrapper-end -->
 
-  @include('dashboard.layouts.script')
+  @include('admin.layouts.script')
 
 </body>
 </html>

@@ -11,7 +11,7 @@ class RegisterController extends Controller
   
   public function index()
   {
-    return view('dashboard.auth.register', [
+    return view('admin.auth.register', [
       'title' => 'Register'
     ]);
   }

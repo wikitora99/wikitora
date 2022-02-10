@@ -51,7 +51,7 @@ Route::name('dashboard.')->group(function() {
   });  
 
   Route::get('/dashboard', function(){
-    return view('dashboard.home', [
+    return view('admin.dashboard', [
       'title' => 'Dashboard'
     ]);
   })->name('home');
