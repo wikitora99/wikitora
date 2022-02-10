@@ -1,5 +1,5 @@
 
-@extends('pages.layout.main')
+@extends('layouts.main')
 
 @section('content')
 
@@ -158,7 +158,7 @@
         </div>
         <!-- Single Post Area-end -->
         
-        @include('pages.partial.sidebar')
+        @include('partials.sidebar')
 
        </div>
     </div>

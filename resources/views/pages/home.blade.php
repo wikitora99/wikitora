@@ -1,5 +1,5 @@
 
-@extends('pages.layout.main')
+@extends('layouts.main')
 
 @section('content')
   <!-- Slider Area-start -->
@@ -21,7 +21,7 @@
 
           <!-- Slider Image -->
           <div class="my_img d-none d-lg-block">
-            <img src="img/about/my_img.png" alt="">
+            <img src="/img/about/my_img.png" alt="">
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="single_service text-center">
             <div class="icon">
-              <img src="img/icons/webdev-service.png" alt="Web Development">
+              <img src="/img/icons/webdev-service.png" alt="Web Development">
             </div>
             <h3>Web Development</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus rhoncus non nisi nec iaculis risus ut neque vestibulum.</p>
@@ -108,7 +108,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="single_service text-center">
             <div class="icon">
-              <img src="img/icons/design-service.png" alt="UI/UX Design">
+              <img src="/img/icons/design-service.png" alt="UI/UX Design">
             </div>
             <h3>UI/UX Design</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus rhoncus non nisi nec iaculis risus ut neque vestibulum.</p>
@@ -117,7 +117,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="single_service text-center">
             <div class="icon">
-              <img src="img/icons/writing-service.png" alt="Content Writing">
+              <img src="/img/icons/writing-service.png" alt="Content Writing">
             </div>
             <h3>Content Writing</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus rhoncus non nisi nec iaculis risus ut neque vestibulum.</p>
@@ -145,7 +145,7 @@
             <div class="col-xl-6 col-lg-6 col-md-6">
               <div class="single_gallery">
                 <div class="thumb">
-                  <img src="img/gallery/1.png" alt="">
+                  <img src="/img/gallery/1.png" alt="">
                 </div>
                 <div class="gallery_heading">
                   <span>Mobile App</span>
@@ -154,7 +154,7 @@
               </div>
               <div class="single_gallery">
                 <div class="thumb">
-                  <img src="img/gallery/2.png" alt="">
+                  <img src="/img/gallery/2.png" alt="">
                 </div>
                 <div class="gallery_heading">
                   <span>Mobile App</span>
@@ -165,7 +165,7 @@
             <div class="col-xl-6 col-lg-6 col-md-6">
               <div class="single_gallery">
                 <div class="thumb">
-                  <img src="img/gallery/3.png" alt="">
+                  <img src="/img/gallery/3.png" alt="">
                 </div>
                 <div class="gallery_heading">
                   <span>Mobile App</span>
@@ -174,7 +174,7 @@
               </div>
               <div class="single_gallery">
                 <div class="thumb">
-                  <img src="img/gallery/4.png" alt="">
+                  <img src="/img/gallery/4.png" alt="">
                 </div>
                 <div class="gallery_heading">
                   <span>Mobile App</span>

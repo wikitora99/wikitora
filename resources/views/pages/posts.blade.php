@@ -1,9 +1,9 @@
 
-@extends('pages.layout.main')
+@extends('layouts.main')
 
 @section('content')
 
-  @include('pages.partial.slider')
+  @include('partials.slider')
 
   <!--=============== Blog Area =================-->
   <section class="blog_area section-padding">
@@ -45,7 +45,7 @@
               </article>   
             @endforeach         
           
-            {{ $posts->onEachSide(2)->links('pages.partial.pagination') }}
+            {{ $posts->onEachSide(2)->links('partials.pagination') }}
 
           @else
             <div class="no_data">
@@ -60,7 +60,7 @@
         </div>
         <!-- Posts Area-end -->
 
-        @include('pages.partial.sidebar')
+        @include('partials.sidebar')
 
       </div>
     </div>

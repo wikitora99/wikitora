@@ -3,9 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ {
   ArticleController as Article,
-  CategoryController as Category,
-  UserController as Author,
-  ContactController as Contact
+  AuthController as Auth,
+  RegisterController as Regist
 };
 
 /*
@@ -27,22 +26,24 @@ Route::get('/', function(){
   ]);
 });
 
-
-Route::prefix('/')->group(function(){
-
-  Route::controller(Article::class)->group(function (){
-    Route::get('blog', 'index');
-    Route::get('blog/{post:slug}', 'post');
-  });
-
-  Route::get('works', function(){ 
-    return view('pages.works', ['title' => 'My Works']);
-  });
-
-  Route::get('login', [Auth::class, 'index']);
-  Route::post('login', [Auth::class, 'login']);
-
-
+Route::controller(Article::class)->group(function (){
+  Route::get('/blog', 'index');
+  Route::get('/blog/{post:slug}', 'post');
 });
+
+Route::get('/works', function(){ 
+  return view('pages.works', [
+    'title' => 'My Works'
+  ]);
+});
+
+Route::get('/login', [Auth::class, 'index']);
+Route::post('/login', [Auth::class, 'login']);
+
+Route::get('/register', [Regist::class, 'index']);
+Route::post('/register', [Regist::class, 'register']);
+
+
+
 
 
