@@ -13,4 +13,4 @@
   <link href="/dashboard/css/style.css" rel="stylesheet">
   
 </head>
-<body class="vh-100">
+<body>
