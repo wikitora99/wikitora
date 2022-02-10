@@ -27,6 +27,14 @@
           </div>
         @endif
 
+        @if (session('loginError'))
+          <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
+            </button>
+            <strong>Failed! </strong>{{ session('loginError') }}
+          </div>
+        @endif
+
           <div class="authincation-content">
             <div class="row no-gutters">
               <div class="col-xl-12">
@@ -37,20 +45,21 @@
                   <h4 class="text-center mb-4">Login to continue</h4>
 
                   <form action="/login" method="post">
+                    @csrf
                     <div class="form-group">
-                      <label class="mb-1"><strong>Email or Username</strong></label>
-                      <input type="email" name="mailnam" class="form-control" placeholder="Your email or username...">
+                      <label class="mb-1"><strong>Username</strong></label>
+                      <input autofocus type="text" name="username" class="form-control" autocomplete="off" required placeholder="Your username...">
                     </div>
                     <div class="form-group">
                       <label class="mb-1"><strong>Password</strong></label>
-                      <input type="password" name="password" class="form-control" placeholder="Your password...">
+                      <input type="password" name="password" class="form-control" required placeholder="Your password..." value="{{ old('username') }}">
                     </div>
 
-                    <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                    <!-- <div class="form-row d-flex justify-content-between mt-4 mb-2">
                       <div class="form-group">
-                        <a href="page-forgot-password.html">Forgot password?</a>
+                        <a href="/forgot">Forgot password?</a>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary btn-block">Login</button>
                     </div>
@@ -77,15 +86,7 @@
   
   <script src="{{ asset('dashboard/js/custom.js') }}"></script>
   <script src="{{ asset('dashboard/js/deznav-init.js') }}"></script>
-      
-  <script>
-    jQuery(document).ready(function(){
-      setTimeout(function() {
-        dezSettingsOptions.version = 'dark';
-        new dezSettings(dezSettingsOptions);
-      },1500)
-    });
-  </script>
+  <script src="{{ asset('dashboard/js/auth-dark.js') }}"></script>
 
 </body>
 </html>

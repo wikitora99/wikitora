@@ -95,15 +95,7 @@
   
   <script src="{{ asset('dashboard/js/custom.js') }}"></script>
   <script src="{{ asset('dashboard/js/deznav-init.js') }}"></script>
-      
-  <script>
-    jQuery(document).ready(function(){
-      setTimeout(function() {
-        dezSettingsOptions.version = 'dark';
-        new dezSettings(dezSettingsOptions);
-      },1500)
-    });
-  </script>
+  <script src="{{ asset('dashboard/js/auth-dark.js') }}"></script>
 
 </body>
 </html>
