@@ -28,15 +28,8 @@
   <!-- Connect Area -->  
   <div class="col-xl-3 col-lg-3 d-none d-lg-block">
     <div class="Appointment">
-      <div class="book_btn d-none d-lg-block">
-      @auth
-        <form action="/logout" method="post">
-          @csrf
-          <button type="submit">Logout</button>
-        </form>
-      @else      
-        <a href="#">Let's Talk</a>
-      @endauth
+      <div class="book_btn d-none d-lg-block">  
+        <a href="#">Let's Talk</a>      
       </div>
     </div>
   </div>

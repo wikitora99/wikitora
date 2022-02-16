@@ -371,7 +371,7 @@
 			if (IMAGE_URL) {
 				$OPTION.attr('data-content', "<img src='%i'/> %s".replace(/%i/, IMAGE_URL).replace(/%s/, $OPTION.text()))
 			}
-			console.warn('option:', idx, $OPTION)
+			// console.warn('option:', idx, $OPTION)
 		});
 		$_SELECT_PICKER.selectpicker();
 	}

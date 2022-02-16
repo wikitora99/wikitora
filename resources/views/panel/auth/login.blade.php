@@ -7,10 +7,10 @@
 
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.png') }}">
-  <link rel="stylesheet" href="{{ asset('dashboard/vendor/chartist/css/chartist.min.css') }}">
-  <link href="{{ asset('dashboard/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('dashboard/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
-  <link href="{{ asset('dashboard/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('panel/vendor/chartist/css/chartist.min.css') }}">
+  <link href="{{ asset('panel/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('panel/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+  <link href="{{ asset('panel/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body class="vh-100">
@@ -81,12 +81,12 @@
       Scripts
   ***********************************-->
   <!-- Required vendors -->
-  <script src="{{ asset('dashboard/vendor/global/global.min.js') }}"></script>
-  <script src="{{ asset('dashboard/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+  <script src="{{ asset('panel/vendor/global/global.min.js') }}"></script>
+  <script src="{{ asset('panel/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
   
-  <script src="{{ asset('dashboard/js/custom.js') }}"></script>
-  <script src="{{ asset('dashboard/js/deznav-init.js') }}"></script>
-  <script src="{{ asset('dashboard/js/auth-dark.js') }}"></script>
+  <script src="{{ asset('panel/js/custom.js') }}"></script>
+  <script src="{{ asset('panel/js/deznav-init.js') }}"></script>
+  <script src="{{ asset('panel/js/auth-dark.js') }}"></script>
 
 </body>
 </html>

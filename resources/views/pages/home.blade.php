@@ -15,7 +15,7 @@
               <h3>I am Okitora Winnetou<br>
                 <span id="slider-items">Web Developer,UI/UX Designer,Content Writer</span><span id="text-slider"></span>
               </h3>
-              <a class="boxed-btn3-line" href="#">View Works</a>
+              <a class="boxed-btn3-line" href="#works">View Works</a>
             </div>
           </div>
 
@@ -45,7 +45,7 @@
           <div class="download_left">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus non nisi nec iaculis. Vestibulum elementum risus ut neque vulputate, id ullamcorper lacus vestibulum. Quisque aliquam volutpat auctor.</p> 
             <p>Fusce egestas euismod lectus, quis tempor ipsum facilisis vitae. Integer et lacus efficitur, placerat justo id, malesuada lorem. Morbi feugiat eu arcu sit amet dignissim. Proin sit amet metus at velit ullamcorper auctor.</p>
-            <a href="#" class="boxed-btn3-line">Download CV</a>
+            <a href="#" class="boxed-btn3-line">Get Resume</a>
           </div>
         </div>
         <div class="col-lg-5 offset-lg-1 col-md-6">
@@ -186,7 +186,7 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="more_works">
-                <a class="boxed-btn3-line" href="#">More Works</a>
+                <a class="boxed-btn3-line" href="/works">See More Works</a>
               </div>
             </div>
           </div>

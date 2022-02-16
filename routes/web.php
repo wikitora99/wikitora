@@ -38,9 +38,8 @@ Route::get('/works', function() {
   ]);
 });
 
-
-Route::name('dashboard.')->group(function() {
-
+Route::group(['name' => 'dashboard.'], function() {
+  
   Route::controller(Auth::class)->group(function() {
     Route::get('/login', 'index')->middleware('guest')->name('login');
     Route::post('/login', 'login')->name('postLogin');

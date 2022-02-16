@@ -11,7 +11,7 @@ class AuthController extends Controller
   
   public function index()
   {
-    return view('admin.auth.login', [
+    return view('panel.auth.login', [
       'title' => 'Login'
     ]);
   }
@@ -25,7 +25,7 @@ class AuthController extends Controller
 
     if (Auth::attempt($credentials)){
       $request->session()->regenerate();
-      return redirect()->intended('/');
+      return redirect()->intended('/dashboard')->with('success', auth()->user()->name);
     }
 
     return back()->with('loginError', 'The provided credentials do not match our records.');
