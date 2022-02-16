@@ -2,7 +2,7 @@
 <div class="col-lg-4">
   <div class="blog_right_sidebar">
     <aside class="single_sidebar_widget search_widget">
-      <form action="/blog" method="get">
+      <form action="{{ route('post.index') }}" method="get">
       @if (request('category'))
         <input type="hidden" name="category" value="{{ request('category') }}">
       @endif
@@ -24,7 +24,7 @@
       <ul class="list cat-list">
       @foreach ($categories as $cat)
         <li>        
-          <a href="/blog?category={{ $cat->slug }}" class="d-flex">
+          <a href="{{ route('post.index', ['category' => $cat->slug]) }}" class="d-flex">
             <p>{{ $cat->name }} ({{ $cat->total }})</p>
           </a>
         </li>
@@ -38,9 +38,9 @@
       <h3 class="widget_title">Popular Post</h3>
     @foreach($popular as $post)
       <div class="media post_item">
-        <img src="/img/blog/cover/{{ $post->cover }}" alt="Post Thumbnail">
+        <img src="{{ asset('img/blog/cover/') }}/{{ $post->cover }}" alt="Post Thumbnail">
         <div class="media-body">
-          <a href="/blog/{{ $post->slug }}">
+          <a href="{{ route('post.show', ['post' => $post]) }}">
             <h3>{{ Str::limit($post->title, 40) }}</h3>
           </a>
           <p>{{ $post->published_at->diffForHumans() }}</p>
@@ -55,7 +55,7 @@
       <ul class="list">
       @foreach ($tags as $tag)
         <li>
-          <a href="/blog?tag={{ $tag->slug }}">{{ $tag->name }}</a>
+          <a href="{{ route('post.index', ['tag' => $tag->slug]) }}">{{ $tag->name }}</a>
         </li>
       @endforeach
       </ul>

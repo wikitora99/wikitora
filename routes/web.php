@@ -27,32 +27,29 @@ Route::get('/', function() {
   ]);
 });
 
-Route::controller(Article::class)->group(function() {
-  Route::get('/blog', 'index');
-  Route::get('/blog/{post:slug}', 'post');
-});
+Route::resource('post', Article::class);
 
-Route::get('/works', function() { 
+Route::get('works', function() { 
   return view('pages.works', [
     'title' => 'My Works'
   ]);
 });
 
 Route::group(['name' => 'dashboard.'], function() {
-  
+
   Route::controller(Auth::class)->group(function() {
-    Route::get('/login', 'index')->middleware('guest')->name('login');
-    Route::post('/login', 'login')->name('postLogin');
-    Route::post('/logout', 'logout')->middleware('auth')->name('logout');
+    Route::get('login', 'index')->middleware('guest')->name('login');
+    Route::post('login', 'login')->name('postLogin');
+    Route::post('logout', 'logout')->middleware('auth')->name('logout');
   });  
 
   Route::controller(Regist::class)->group(function() {
-    Route::get('/register', 'index')->middleware('guest')->name('register');
-    Route::post('/register', 'store')->name('postRegister');
+    Route::get('register', 'index')->middleware('guest')->name('register');
+    Route::post('register', 'store')->name('postRegister');
   });  
 
   Route::controller(Dashboard::class)->group(function() {
-    Route::get('/dashboard', 'index')->middleware('auth')->name('home');
+    Route::get('dashboard', 'index')->middleware('auth')->name('home');
   });
 
 });
