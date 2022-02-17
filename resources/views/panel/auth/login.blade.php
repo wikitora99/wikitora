@@ -66,7 +66,7 @@
                   </form>
 
                   <div class="new-account mt-3">
-                    <p>Don't have an account? <a class="text-primary" href="/register">Register</a></p>
+                    <p>Don't have an account? <a class="text-primary" href="{{ route('dashboard.register') }}">Register</a></p>
                   </div>
                 </div>
               </div>

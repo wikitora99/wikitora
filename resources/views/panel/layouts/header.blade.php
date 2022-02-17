@@ -104,9 +104,9 @@
         </li>
 
         <li class="nav-item header-profile">
-          <form action="/logout" method="post" class="nav-link">
+          <form action="{{ route('dashboard.logout') }}" method="post" class="nav-link">
           @csrf
-            <button type="submit" class="btn btn-rounded btn-primary"><span class="btn-icon-start text-primary"><i class="fas fa-sign-out-alt color-primary"></i></span>Logout</button>
+            <button type="submit" class="btn btn-rounded btn-primary logout-btn"><span class="btn-icon-start text-primary"><i class="fas fa-sign-out-alt color-primary"></i></span>Logout</button>
           </form>
         </li>
       </ul>

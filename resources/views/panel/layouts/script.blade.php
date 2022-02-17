@@ -2,6 +2,7 @@
 <script src="{{ asset('panel/vendor/global/global.min.js') }}"></script>
 <script src="{{ asset('panel/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
 <script src="{{ asset('panel/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+<script src="{{ asset('panel/vendor/sweetalert2/dist/sweetalert2.min.js') }}"></script>
 
 <!-- Chart piety plugin files -->
 <script src="{{ asset('panel/vendor/peity/jquery.peity.min.js') }}"></script>
@@ -16,3 +17,4 @@
 <script src="{{ asset('panel/js/custom.js') }}"></script>
 <script src="{{ asset('panel/js/deznav-init.js') }}"></script>
 <script src="{{ asset('panel/js/auth-dark.js') }}"></script>
+<script src="{{ asset('panel/js/wikidev.js') }}"></script>
