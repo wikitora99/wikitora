@@ -45,7 +45,7 @@
           <div class="download_left">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus non nisi nec iaculis. Vestibulum elementum risus ut neque vulputate, id ullamcorper lacus vestibulum. Quisque aliquam volutpat auctor.</p> 
             <p>Fusce egestas euismod lectus, quis tempor ipsum facilisis vitae. Integer et lacus efficitur, placerat justo id, malesuada lorem. Morbi feugiat eu arcu sit amet dignissim. Proin sit amet metus at velit ullamcorper auctor.</p>
-            <a href="#" class="boxed-btn3-line">Get Resume &nbsp;<i class="fa fa-download"></i></a>
+            <a href="{{ asset('resume/OkitoraWinnetou_R022022.pdf') }}" target="_blank" class="boxed-btn3-line">Get Resume &nbsp;<i class="fa fa-download"></i></a>
           </div>
         </div>
         <div class="col-lg-5 offset-lg-1 col-md-6">

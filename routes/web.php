@@ -5,7 +5,8 @@ use App\Http\Controllers\ {
   ArticleController as Article,
   AuthController as Auth,
   RegisterController as Regist,
-  DashboardController as Dashboard
+  DashboardController as Dashboard,
+  UserController as User
 };
 
 /*
@@ -20,22 +21,15 @@ use App\Http\Controllers\ {
 */
 
 
+Route::group(['prefix' => '/'], function() {
+  Route::get('/', function() { return view('pages.home', ['title' => 'A Living Robot']); });
+  Route::get('works', [User::class, 'works']);
 
-Route::get('/', function() {
-  return view('pages.home', [
-    'title' => 'A Living Robot'
-  ]);
+  Route::resource('post', Article::class);
 });
 
-Route::resource('post', Article::class);
 
-Route::get('works', function() { 
-  return view('pages.works', [
-    'title' => 'My Works'
-  ]);
-});
-
-Route::group(['name' => 'dashboard.'], function() {
+Route::group(['name' => 'dashboard'], function() {
 
   Route::controller(Auth::class)->group(function() {
     Route::get('login', 'index')->middleware('guest')->name('login');
