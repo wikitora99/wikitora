@@ -4,13 +4,7 @@
 @section('content')
   <div class="container-fluid">
 
-  @if (session('success'))
-    <div class="alert alert-success alert-dismissible fade show">
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
-      </button>
-      <strong>Welcome! </strong>{{ session('success') }}
-    </div>
-  @endif
+  <div class="flash-message hidden" data-attr="{{ session('flash') }}"></div>
 
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center">
       <h2 class="font-w600 title mb-2 me-auto ">Dashboard</h2>

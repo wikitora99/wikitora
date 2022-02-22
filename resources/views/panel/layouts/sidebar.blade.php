@@ -2,9 +2,9 @@
 
   <div class="main-profile">
     <div class="image-bx">
-      <img src="{{ asset('panel/images/Untitled-1.jpg') }}" alt="">
+      <img src="{{ asset('panel/images/profile/small/') }}/{{ auth()->user()->avatar }}" alt="">
     </div>
-    <h5 class="name"><span class="font-w400">Hello,</span> {{ strtok(auth()->user()->name,' ') }}</h5>
+    <h5 class="name"><span class="font-w400">Hello,</span> {{ auth()->user()->username }}</h5>
     <p class="email">{{ auth()->user()->email }}</p>
   </div>
 

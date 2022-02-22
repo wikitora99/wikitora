@@ -25,7 +25,8 @@ class AuthController extends Controller
 
     if (Auth::attempt($credentials)){
       $request->session()->regenerate();
-      return redirect()->intended('/dashboard')->with('success', auth()->user()->name);
+      return redirect()->intended(route('dashboard.home'))
+                          ->with('flash', 'success|Welcome! '.auth()->user()->name);
     }
 
     return back()->with('failed', 'The provided credentials do not match our records.');

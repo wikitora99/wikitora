@@ -17,12 +17,7 @@ class User extends Authenticatable
    *
    * @var array<int, string>
    */
-  protected $fillable = [
-    'name',
-    'username',
-    'email',
-    'password',
-  ];
+  protected $guarded = ['id'];
 
   // protected $guarded = ['id'];
 
@@ -49,5 +44,10 @@ class User extends Authenticatable
   {
     return $this->hasMany(Article::class);
   }
+
+  // public function role()
+  // {
+  //   return $this->belongsTo(UserRole::class);
+  // }
   
 }

@@ -32,7 +32,7 @@ Route::group(['prefix' => '/'], function() {
 Route::name('dashboard.')->group(function() {
 
   Route::controller(Auth::class)->group(function() {
-    Route::get('login', 'index')->middleware('guest')->name('login');
+    Route::get('login', 'index')->name('login');
     Route::post('login', 'login')->name('postLogin');
     Route::post('logout', 'logout')->middleware('auth')->name('logout');
   });  
