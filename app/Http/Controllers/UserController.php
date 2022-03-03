@@ -13,4 +13,11 @@ class UserController extends Controller
     //
   }
 
+
+
+  public function works()
+  {
+    return view('pages.works', ['title' => 'My Works']);
+  }
+
 }

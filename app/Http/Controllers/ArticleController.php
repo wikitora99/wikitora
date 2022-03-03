@@ -41,7 +41,7 @@ class ArticleController extends Controller
     ]);
   }
 
-  public function post(Article $post)
+  public function show(Article $post)
   {
     return view('pages.post', [
       'title' => $post->title,

@@ -12,7 +12,7 @@
         <div class="col-lg-8 posts-list">
           <div class="single-post">
             <div class="feature-img">
-               <img class="img-fluid" src="/img/blog/cover/{{ $post->cover }}" alt="">
+               <img class="img-fluid" src="{{ asset('img/blog/cover') }}/{{ $post->cover }}" alt="">
             </div>
 
             <!-- Article Detail-start -->
@@ -21,11 +21,11 @@
               <ul class="blog-info-link mt-3 mb-4">
                 <li>
                   <i class="fa fa-user"></i>
-                  <a href="/blog?author={{ $post->author->username }}"> {{ $post->author->name }}</a>
+                  <a href="{{ route('post.index', ['author' => $post->author->username]) }}"> {{ $post->author->name }}</a>
                 </li>
                 <li>
                   <i class="fa fa-tag"></i>
-                  <a href="/blog?category={{ $post->category->slug }}"> {{ $post->category->name }}</a>
+                  <a href="{{ route('post.index', ['category' => $post->category->slug]) }}"> {{ $post->category->name }}</a>
                 </li>
                 <li>
                   <i class="fa fa-calendar"></i>
@@ -46,7 +46,7 @@
               <div class="single-comment justify-content-between d-flex">
                 <div class="user justify-content-between d-flex">
                   <div class="thumb">
-                    <img src="/img/comment/comment_1.png" alt="">
+                    <img src="{{ asset('img/comment/comment_1.png') }}" alt="">
                   </div>
                   <div class="desc">
                     <p class="comment">
@@ -72,7 +72,7 @@
                <div class="single-comment justify-content-between d-flex">
                   <div class="user justify-content-between d-flex">
                      <div class="thumb">
-                        <img src="/img/comment/comment_2.png" alt="">
+                        <img src="{{ asset('img/comment/comment_2.png') }}" alt="">
                      </div>
                      <div class="desc">
                         <p class="comment">
@@ -98,7 +98,7 @@
               <div class="single-comment justify-content-between d-flex">
                 <div class="user justify-content-between d-flex">
                   <div class="thumb">
-                    <img src="/img/comment/comment_3.png" alt="">
+                    <img src="{{ asset('img/comment/comment_3.png') }}" alt="">
                   </div>
                   <div class="desc">
                     <p class="comment">

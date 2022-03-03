@@ -16,17 +16,20 @@ class Article extends Model
   protected $dates = ['published_at'];
 
 
+  public function getRouteKeyName() 
+  {
+    return 'slug';
+  }  
+
   public function scopeNewest()
   {
     return $this->orderBy('published_at', 'desc');
   }
 
-
   public function scopePopular()
   {
     return $this->orderBy('views', 'desc')->limit(5);
   }
-
 
   public function scopeFilter($query, array $filters)
   {
