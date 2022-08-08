@@ -29,7 +29,7 @@ $(function() {
     let message = data[1];
 
     Swal.fire({
-      position: 'center',
+      position: 'center'
       type: icon,
       title: message,
       showConfirmButton: true,

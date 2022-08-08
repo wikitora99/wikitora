@@ -14,7 +14,7 @@
         <div class="col-lg-8 mb-5 mb-lg-0">
           <div class="blog_left_sidebar">    
 
-          @if ($posts->count())
+          @if ($posts->isNotEmpty())
 
             @foreach ($posts as $post)
               <!-- Article -->
