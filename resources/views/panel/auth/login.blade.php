@@ -31,7 +31,7 @@
           <div class="alert alert-danger alert-dismissible fade show">
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
             </button>
-            <strong>Failed! </strong>{{ session('failed') }}
+            <strong>Error! </strong>{{ session('failed') }}
           </div>
         @endif
 
